@@ -1,0 +1,294 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7352AB3013AA4C8600B65CBF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7352AB2F13AA4C8600B65CBF /* UIKit.framework */; };
+		7352AB3213AA4C8600B65CBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7352AB3113AA4C8600B65CBF /* Foundation.framework */; };
+		7352AB3413AA4C8600B65CBF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7352AB3313AA4C8600B65CBF /* CoreGraphics.framework */; };
+		7352AB3A13AA4C8600B65CBF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7352AB3813AA4C8600B65CBF /* InfoPlist.strings */; };
+		7352AB3D13AA4C8600B65CBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7352AB3C13AA4C8600B65CBF /* main.m */; };
+		7352AB4013AA4C8600B65CBF /* StackPadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7352AB3F13AA4C8600B65CBF /* StackPadAppDelegate.m */; };
+		7352AB4313AA4C8600B65CBF /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7352AB4113AA4C8600B65CBF /* MainWindow.xib */; };
+		7352AB4613AA4C8600B65CBF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7352AB4513AA4C8600B65CBF /* DetailViewController.m */; };
+		7352AB4913AA4C8600B65CBF /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7352AB4713AA4C8600B65CBF /* DetailView.xib */; };
+		7352AB4C13AA4C8600B65CBF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7352AB4B13AA4C8600B65CBF /* RootViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7352AB2B13AA4C8600B65CBF /* StackPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7352AB2F13AA4C8600B65CBF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7352AB3113AA4C8600B65CBF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7352AB3313AA4C8600B65CBF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7352AB3713AA4C8600B65CBF /* StackPad-Info.plist */ = {isa = PBXFileReference; path = "StackPad-Info.plist"; sourceTree = "<group>"; };
+		7352AB3913AA4C8600B65CBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7352AB3B13AA4C8600B65CBF /* StackPad-Prefix.pch */ = {isa = PBXFileReference; path = "StackPad-Prefix.pch"; sourceTree = "<group>"; };
+		7352AB3C13AA4C8600B65CBF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7352AB3E13AA4C8600B65CBF /* StackPadAppDelegate.h */ = {isa = PBXFileReference; path = StackPadAppDelegate.h; sourceTree = "<group>"; };
+		7352AB3F13AA4C8600B65CBF /* StackPadAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackPadAppDelegate.m; sourceTree = "<group>"; };
+		7352AB4213AA4C8600B65CBF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		7352AB4413AA4C8600B65CBF /* DetailViewController.h */ = {isa = PBXFileReference; path = DetailViewController.h; sourceTree = "<group>"; };
+		7352AB4513AA4C8600B65CBF /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		7352AB4813AA4C8600B65CBF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailView.xib; sourceTree = "<group>"; };
+		7352AB4A13AA4C8600B65CBF /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		7352AB4B13AA4C8600B65CBF /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7352AB2813AA4C8600B65CBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7352AB3013AA4C8600B65CBF /* UIKit.framework in Frameworks */,
+				7352AB3213AA4C8600B65CBF /* Foundation.framework in Frameworks */,
+				7352AB3413AA4C8600B65CBF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7352AB2013AA4C8500B65CBF = {
+			isa = PBXGroup;
+			children = (
+				7352AB3513AA4C8600B65CBF /* StackPad */,
+				7352AB2E13AA4C8600B65CBF /* Frameworks */,
+				7352AB2C13AA4C8600B65CBF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7352AB2C13AA4C8600B65CBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7352AB2B13AA4C8600B65CBF /* StackPad.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7352AB2E13AA4C8600B65CBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7352AB2F13AA4C8600B65CBF /* UIKit.framework */,
+				7352AB3113AA4C8600B65CBF /* Foundation.framework */,
+				7352AB3313AA4C8600B65CBF /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7352AB3513AA4C8600B65CBF /* StackPad */ = {
+			isa = PBXGroup;
+			children = (
+				7352AB3E13AA4C8600B65CBF /* StackPadAppDelegate.h */,
+				7352AB3F13AA4C8600B65CBF /* StackPadAppDelegate.m */,
+				7352AB4113AA4C8600B65CBF /* MainWindow.xib */,
+				7352AB4413AA4C8600B65CBF /* DetailViewController.h */,
+				7352AB4513AA4C8600B65CBF /* DetailViewController.m */,
+				7352AB4713AA4C8600B65CBF /* DetailView.xib */,
+				7352AB4A13AA4C8600B65CBF /* RootViewController.h */,
+				7352AB4B13AA4C8600B65CBF /* RootViewController.m */,
+				7352AB3613AA4C8600B65CBF /* Supporting Files */,
+			);
+			path = StackPad;
+			sourceTree = "<group>";
+		};
+		7352AB3613AA4C8600B65CBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7352AB3713AA4C8600B65CBF /* StackPad-Info.plist */,
+				7352AB3813AA4C8600B65CBF /* InfoPlist.strings */,
+				7352AB3B13AA4C8600B65CBF /* StackPad-Prefix.pch */,
+				7352AB3C13AA4C8600B65CBF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7352AB2A13AA4C8600B65CBF /* StackPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7352AB4F13AA4C8600B65CBF /* Build configuration list for PBXNativeTarget "StackPad" */;
+			buildPhases = (
+				7352AB2713AA4C8600B65CBF /* Sources */,
+				7352AB2813AA4C8600B65CBF /* Frameworks */,
+				7352AB2913AA4C8600B65CBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StackPad;
+			productName = StackPad;
+			productReference = 7352AB2B13AA4C8600B65CBF /* StackPad.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7352AB2213AA4C8500B65CBF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Mobilitea;
+			};
+			buildConfigurationList = 7352AB2513AA4C8500B65CBF /* Build configuration list for PBXProject "StackPad" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7352AB2013AA4C8500B65CBF;
+			productRefGroup = 7352AB2C13AA4C8600B65CBF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7352AB2A13AA4C8600B65CBF /* StackPad */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7352AB2913AA4C8600B65CBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7352AB3A13AA4C8600B65CBF /* InfoPlist.strings in Resources */,
+				7352AB4313AA4C8600B65CBF /* MainWindow.xib in Resources */,
+				7352AB4913AA4C8600B65CBF /* DetailView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7352AB2713AA4C8600B65CBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7352AB3D13AA4C8600B65CBF /* main.m in Sources */,
+				7352AB4013AA4C8600B65CBF /* StackPadAppDelegate.m in Sources */,
+				7352AB4613AA4C8600B65CBF /* DetailViewController.m in Sources */,
+				7352AB4C13AA4C8600B65CBF /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7352AB3813AA4C8600B65CBF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7352AB3913AA4C8600B65CBF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7352AB4113AA4C8600B65CBF /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7352AB4213AA4C8600B65CBF /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		7352AB4713AA4C8600B65CBF /* DetailView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7352AB4813AA4C8600B65CBF /* en */,
+			);
+			name = DetailView.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7352AB4D13AA4C8600B65CBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		7352AB4E13AA4C8600B65CBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		7352AB5013AA4C8600B65CBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StackPad/StackPad-Prefix.pch";
+				INFOPLIST_FILE = "StackPad/StackPad-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7352AB5113AA4C8600B65CBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StackPad/StackPad-Prefix.pch";
+				INFOPLIST_FILE = "StackPad/StackPad-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7352AB2513AA4C8500B65CBF /* Build configuration list for PBXProject "StackPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7352AB4D13AA4C8600B65CBF /* Debug */,
+				7352AB4E13AA4C8600B65CBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7352AB4F13AA4C8600B65CBF /* Build configuration list for PBXNativeTarget "StackPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7352AB5013AA4C8600B65CBF /* Debug */,
+				7352AB5113AA4C8600B65CBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7352AB2213AA4C8500B65CBF /* Project object */;
+}
