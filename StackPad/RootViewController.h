@@ -7,14 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SPUser.h"
+#import "SPBaseViewController.h"
 
-@class DetailViewController;
+@class UserViewController;
 
-@interface RootViewController : UITableViewController {
-
+@interface RootViewController : UITableViewController<UITableViewDataSource> {
+    NSMutableArray *users;
 }
 
-		
-@property (nonatomic, retain) IBOutlet DetailViewController *detailViewController;
+// Get an array of users
+- (void) updateUsersArray;
+
+@property (nonatomic, retain) IBOutlet SPBaseViewController *contentView;
+@property (nonatomic, retain) NSMutableArray *users;
 
 @end

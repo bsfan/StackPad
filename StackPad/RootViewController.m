@@ -7,21 +7,31 @@
 //
 
 #import "RootViewController.h"
-
-#import "DetailViewController.h"
+#import "UserViewController.h"
+#import "SPUser.h"
+#import "StackExchangeAPI.h"
 
 @implementation RootViewController
 		
-@synthesize detailViewController;
+@synthesize contentView;
+@synthesize users;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.clearsSelectionOnViewWillAppear = NO;
-    self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
+    self.contentSizeForViewInPopover = CGSizeMake(260.0, 500.0);
+    
+    [NSThread detachNewThreadSelector:@selector(updateUsersArray) toTarget:self withObject:nil];
 }
 
-		
+- (void) updateUsersArray {
+    self.users = [StackExchangeAPI getAllUsers];
+    [self.contentView setDetailItem:[self.users objectAtIndex:0]];
+    [[self tableView] setNeedsLayout];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -49,28 +59,31 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
-    		
 }
 
 		
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if (self.users != nil && [self.users count] > 0) {
+        return [self.users count];
+    }
     return 0;
-    		
 }
 
 		
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"CellIdentifier";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell.accessoryType = UITableViewCellAccessoryNone;
     }
 
     // Configure the cell.
-    		
+    cell.textLabel.text = [(SPUser*)[self.users objectAtIndex:indexPath.row] displayName];
     return cell;
 }
 
@@ -107,9 +120,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self.contentView setDetailItem:[self.users objectAtIndex:indexPath.row]];
     // Navigation logic may go here -- for example, create and push another view controller.
     /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     DetailViewController *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@ <#Nib name#>" bundle:nil];
      NSManagedObject *selectedObject = [[self fetchedResultsController] objectAtIndexPath:indexPath];
      // ...
      // Pass the selected object to the new view controller.
@@ -134,7 +148,7 @@
 
 - (void)dealloc
 {
-    [detailViewController release];
+    [contentView release];
     [super dealloc];
 }
 
