@@ -86,4 +86,23 @@ NSString* const StackExchangeApiTags = @"tags";
     return questions;
 }
 
++(NSMutableArray*) getAllAnswers {
+    NSDictionary* answerDict = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiAnswers];
+    
+    // Get an array of users
+    NSArray *answerArray = (NSArray*)[answerDict valueForKey:StackExchangeApiAnswers];
+    
+    // Loop over these objects and assign them to the mutable array as users
+    int index;
+    NSDictionary *singleAnswerDict;
+    NSMutableArray* answers = [[NSMutableArray alloc] initWithCapacity:answerArray.count];
+    
+    for (index = 0; index < answerArray.count; index++) {
+        singleAnswerDict = (NSDictionary*) [answerArray objectAtIndex:index];
+        [answers insertObject:[SPQuestion initWithDictionary:singleAnswerDict] atIndex:index];
+    }
+    
+    return answers;
+}
+
 @end

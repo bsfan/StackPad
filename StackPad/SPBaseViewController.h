@@ -13,7 +13,7 @@
     IBOutlet UIView* dataView;
     IBOutlet UILabel* titleLabel;
     IBOutlet UILabel* subtitleLabel;
-    IBOutlet UITableView* tableView;
+    IBOutlet UITableView* baseTableView;
 }
 
 -(void) setDetailItem:(id)newDetailItem type:(int)type;
@@ -21,7 +21,7 @@
 @property (nonatomic, retain) IBOutlet UIView* dataView;
 @property (nonatomic, retain) IBOutlet UILabel* titleLabel;
 @property (nonatomic, retain) IBOutlet UILabel* subtitleLabel;
-@property (nonatomic, retain) IBOutlet UITableView* tableView;
+@property (nonatomic, retain) IBOutlet UITableView* baseTableView;
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 
 @property (nonatomic, retain) id detailItem;

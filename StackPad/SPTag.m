@@ -8,7 +8,6 @@
 
 #import "SPTag.h"
 
-
 @implementation SPTag
 
 @end

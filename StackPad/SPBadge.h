@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SPBaseModel.h"
 
-
-@interface SPBadge : NSObject {
+@interface SPBadge : SPBaseModel {
     
 }
 

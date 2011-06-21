@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SPBaseModel.h"
 #import "SPUser.h"
 
 // JSON identifiers
@@ -28,7 +29,7 @@ extern NSString* const SPQuestionTitle;
 extern NSString* const SPQuestionCommunityOwned;
 
 // Represents a StackExchange question
-@interface SPQuestion : NSObject {
+@interface SPQuestion : SPBaseModel {
     NSInteger* questionId;
     NSMutableArray* tags;
     NSInteger* answerCount;

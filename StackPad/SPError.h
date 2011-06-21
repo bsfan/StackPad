@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SPBaseModel.h"
 
-
-@interface SPError : NSObject {
+@interface SPError : SPBaseModel {
     
 }
 

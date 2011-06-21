@@ -46,7 +46,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="IBUIView" id="758911330">
 						<reference key="NSNextResponder" ref="647120888"/>
-						<int key="NSvFlags">292</int>
+						<int key="NSvFlags">276</int>
 						<object class="NSMutableArray" key="NSSubviews">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBUITableView" id="832288005">
@@ -106,7 +106,7 @@
 							<object class="IBUILabel" id="926619411">
 								<reference key="NSNextResponder" ref="570255570"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{20, 17}, {206, 38}}</string>
+								<string key="NSFrame">{{10, 17}, {206, 38}}</string>
 								<reference key="NSSuperview" ref="570255570"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="477451441"/>
@@ -132,7 +132,7 @@
 							<object class="IBUILabel" id="477451441">
 								<reference key="NSNextResponder" ref="570255570"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{20, 48}, {233, 21}}</string>
+								<string key="NSFrame">{{10, 48}, {233, 21}}</string>
 								<reference key="NSSuperview" ref="570255570"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="758911330"/>
@@ -216,14 +216,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">tableView</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="832288005"/>
-					</object>
-					<int key="connectionID">103</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">toolbar</string>
 						<reference key="source" ref="841351856"/>
 						<reference key="destination" ref="410698538"/>
@@ -245,6 +237,14 @@
 						<reference key="destination" ref="841351856"/>
 					</object>
 					<int key="connectionID">106</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">baseTableView</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="832288005"/>
+					</object>
+					<int key="connectionID">107</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -365,7 +365,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">106</int>
+			<int key="maxID">107</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -377,17 +377,17 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>baseTableView</string>
 							<string>dataView</string>
 							<string>subtitleLabel</string>
-							<string>tableView</string>
 							<string>titleLabel</string>
 							<string>toolbar</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UITableView</string>
 							<string>UIView</string>
 							<string>UILabel</string>
-							<string>UITableView</string>
 							<string>UILabel</string>
 							<string>UIToolbar</string>
 						</object>
@@ -396,14 +396,18 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>baseTableView</string>
 							<string>dataView</string>
 							<string>subtitleLabel</string>
-							<string>tableView</string>
 							<string>titleLabel</string>
 							<string>toolbar</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">baseTableView</string>
+								<string key="candidateClassName">UITableView</string>
+							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">dataView</string>
 								<string key="candidateClassName">UIView</string>
@@ -411,10 +415,6 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">subtitleLabel</string>
 								<string key="candidateClassName">UILabel</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">tableView</string>
-								<string key="candidateClassName">UITableView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">titleLabel</string>

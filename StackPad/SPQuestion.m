@@ -45,7 +45,7 @@ NSString* const SPQuestionCommunityOwned = @"community_owned";
 @synthesize communityOwned;
 
 +(SPQuestion *)initWithDictionary:(NSDictionary *)dictionary {
-    SPQuestion* question = [[SPQuestion alloc] init];
+    SPQuestion* question = [[[SPQuestion alloc] init] autorelease];
     question.questionId = (NSInteger*) [dictionary objectForKey:SPQuestionId];
     question.answerCount = (NSInteger*) [dictionary objectForKey:SPQuestionAnswerCount];
     question.favoriteCount = (NSInteger*) [dictionary objectForKey:SPQuestionFavoriteCount];
@@ -62,6 +62,21 @@ NSString* const SPQuestionCommunityOwned = @"community_owned";
     question.title = (NSString*) [dictionary objectForKey:SPQuestionTitle];
     question.communityOwned = [[dictionary objectForKey:SPQuestionCommunityOwned] boolValue];
     return question;
+}
+
+-(UITableViewCell*) getUITableCellInTable:(UITableView*)table {
+    static NSString *CellIdentifier = @"UserCell";
+    UITableViewCell *cell = nil;    
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
+    NSString* label = [self title];
+    cell.textLabel.text = label;
+    cell.textLabel.font = [UIFont systemFontOfSize:16.0];
+    
+    return cell;
 }
 
 @end

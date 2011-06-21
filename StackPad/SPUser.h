@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SPBaseModel.h"
 
 // JSON identifiers
 extern NSString* const SPUserId;
@@ -19,7 +20,7 @@ extern NSString * const SPUserQuestionCount;
 extern NSString * const SPUserAnswerCount;
 
 // Represents a User from the StackExchange API
-@interface SPUser : NSObject {
+@interface SPUser : SPBaseModel {
     NSInteger *userId;
     NSString *displayName;
     NSInteger *reputation;

@@ -38,5 +38,6 @@ extern NSString* const StackExchangeApiTags;
 
 +(NSMutableArray*) getAllUsers;
 +(NSMutableArray*) getAllQuestions;
++(NSMutableArray*) getAllAnswers;
 
 @end

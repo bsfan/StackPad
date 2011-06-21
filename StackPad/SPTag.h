@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SPBaseModel.h"
 
-
-@interface SPTag : NSObject {
+@interface SPTag : SPBaseModel {
     
 }
 

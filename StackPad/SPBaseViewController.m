@@ -18,7 +18,7 @@
 @synthesize dataView;
 @synthesize titleLabel;
 @synthesize subtitleLabel;
-@synthesize tableView;
+@synthesize baseTableView;
 @synthesize toolbar;
 @synthesize detailItem;
 @synthesize popoverController;
@@ -40,7 +40,36 @@
 }
 
 - (void) configureView {
-    [[self tableView] reloadData];
+    [[self baseTableView] reloadData];
+    
+    switch (self.type) {
+        case 0:
+            titleLabel.text = @"Top Users";
+            subtitleLabel.text = @"Lists top Stack Exchange users";
+            break;
+        case 1:
+            titleLabel.text = @"Top Questions";
+            subtitleLabel.text = @"Lists top Stack Exchange questions";
+            break;
+        case 2:
+            titleLabel.text = @"Top Answers";
+            subtitleLabel.text = @"Lists top Stack Exchange answers";
+            break;
+        case 3:
+            titleLabel.text = @"Top Comments";
+            subtitleLabel.text = @"Lists top Stack Exchange comments";
+            break;
+        case 4:
+            titleLabel.text = @"Badges";
+            subtitleLabel.text = @"Lists badges that a user can attain";
+            break;
+        case 5:
+            titleLabel.text = @"Tags";
+            subtitleLabel.text = @"Lists all tags which can be assigned to questions";
+            break;
+        default:
+            break;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -52,21 +81,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"UserCell";
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
-    
     NSMutableArray* items = (NSMutableArray*) detailItem;
-    SPUser* user = [items objectAtIndex:[indexPath row]];
-    
-    NSString* label = [user displayName];
-    cell.textLabel.text = label;
-    
-    return cell;
+    SPBaseModel* item = [items objectAtIndex:[indexPath row]];
+    return [item getUITableCellInTable:tableView];
 }
 
 - (void)dealloc
@@ -96,8 +113,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[self tableView] setDelegate:self];
-    [[self tableView] setDataSource:self];
+    [[self baseTableView] setDelegate:self];
+    [[self baseTableView] setDataSource:self];
 }
 
 
