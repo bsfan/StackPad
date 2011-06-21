@@ -14,6 +14,14 @@
 		7344B89813ABCFB900F4B9CB /* SPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7344B89713ABCFB800F4B9CB /* SPError.m */; };
 		7344B89B13ABD07E00F4B9CB /* SPTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 7344B89A13ABD07E00F4B9CB /* SPTag.m */; };
 		7344B8A813ABF9BD00F4B9CB /* SPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7344B8A713ABF9BD00F4B9CB /* SPBaseViewController.m */; };
+		7344B8C213AFBEF400F4B9CB /* Categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7344B8C113AFBEF400F4B9CB /* Categories.plist */; };
+		7344B8C413AFC28600F4B9CB /* tags.png in Resources */ = {isa = PBXBuildFile; fileRef = 7344B8C313AFC28600F4B9CB /* tags.png */; };
+		7344B8C813AFC2AD00F4B9CB /* users.png in Resources */ = {isa = PBXBuildFile; fileRef = 7344B8C713AFC2AD00F4B9CB /* users.png */; };
+		7344B8CA13AFC2D000F4B9CB /* comments.png in Resources */ = {isa = PBXBuildFile; fileRef = 7344B8C913AFC2D000F4B9CB /* comments.png */; };
+		7344B8CC13AFC2F100F4B9CB /* badges.png in Resources */ = {isa = PBXBuildFile; fileRef = 7344B8CB13AFC2F000F4B9CB /* badges.png */; };
+		7344B8CE13AFC2FE00F4B9CB /* answers.png in Resources */ = {isa = PBXBuildFile; fileRef = 7344B8CD13AFC2FD00F4B9CB /* answers.png */; };
+		7344B8D013AFC30B00F4B9CB /* questions.png in Resources */ = {isa = PBXBuildFile; fileRef = 7344B8CF13AFC30B00F4B9CB /* questions.png */; };
+		7344B8D213AFC32B00F4B9CB /* badge.png in Resources */ = {isa = PBXBuildFile; fileRef = 7344B8D113AFC32B00F4B9CB /* badge.png */; };
 		7352AB3013AA4C8600B65CBF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7352AB2F13AA4C8600B65CBF /* UIKit.framework */; };
 		7352AB3213AA4C8600B65CBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7352AB3113AA4C8600B65CBF /* Foundation.framework */; };
 		7352AB3413AA4C8600B65CBF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7352AB3313AA4C8600B65CBF /* CoreGraphics.framework */; };
@@ -21,8 +29,7 @@
 		7352AB3D13AA4C8600B65CBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7352AB3C13AA4C8600B65CBF /* main.m */; };
 		7352AB4013AA4C8600B65CBF /* StackPadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7352AB3F13AA4C8600B65CBF /* StackPadAppDelegate.m */; };
 		7352AB4313AA4C8600B65CBF /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7352AB4113AA4C8600B65CBF /* MainWindow.xib */; };
-		7352AB4613AA4C8600B65CBF /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7352AB4513AA4C8600B65CBF /* UserViewController.m */; };
-		7352AB4913AA4C8600B65CBF /* UserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7352AB4713AA4C8600B65CBF /* UserView.xib */; };
+		7352AB4913AA4C8600B65CBF /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7352AB4713AA4C8600B65CBF /* DetailView.xib */; };
 		7352AB4C13AA4C8600B65CBF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7352AB4B13AA4C8600B65CBF /* RootViewController.m */; };
 		7352AB6113AA57E200B65CBF /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 7352AB5813AA57E200B65CBF /* NSObject+SBJSON.m */; };
 		7352AB6213AA57E200B65CBF /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 7352AB5A13AA57E200B65CBF /* NSString+SBJSON.m */; };
@@ -31,6 +38,7 @@
 		7352AB6513AA57E200B65CBF /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7352AB6013AA57E200B65CBF /* SBJsonWriter.m */; };
 		7352AB6813AA584600B65CBF /* SPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7352AB6713AA584600B65CBF /* SPUser.m */; };
 		7352AB6C13AA8E7D00B65CBF /* StackExchangeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7352AB6B13AA8E7D00B65CBF /* StackExchangeAPI.m */; };
+		73BFB89313B0E55700C8E501 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BFB89213B0E55700C8E501 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +56,14 @@
 		7344B89A13ABD07E00F4B9CB /* SPTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTag.m; sourceTree = "<group>"; };
 		7344B8A613ABF9BD00F4B9CB /* SPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBaseViewController.h; sourceTree = "<group>"; };
 		7344B8A713ABF9BD00F4B9CB /* SPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBaseViewController.m; sourceTree = "<group>"; };
+		7344B8C113AFBEF400F4B9CB /* Categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Categories.plist; sourceTree = "<group>"; };
+		7344B8C313AFC28600F4B9CB /* tags.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tags.png; sourceTree = "<group>"; };
+		7344B8C713AFC2AD00F4B9CB /* users.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = users.png; sourceTree = "<group>"; };
+		7344B8C913AFC2D000F4B9CB /* comments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comments.png; sourceTree = "<group>"; };
+		7344B8CB13AFC2F000F4B9CB /* badges.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badges.png; sourceTree = "<group>"; };
+		7344B8CD13AFC2FD00F4B9CB /* answers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = answers.png; sourceTree = "<group>"; };
+		7344B8CF13AFC30B00F4B9CB /* questions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questions.png; sourceTree = "<group>"; };
+		7344B8D113AFC32B00F4B9CB /* badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge.png; sourceTree = "<group>"; };
 		7352AB2B13AA4C8600B65CBF /* StackPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7352AB2F13AA4C8600B65CBF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7352AB3113AA4C8600B65CBF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -59,9 +75,7 @@
 		7352AB3E13AA4C8600B65CBF /* StackPadAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackPadAppDelegate.h; sourceTree = "<group>"; };
 		7352AB3F13AA4C8600B65CBF /* StackPadAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackPadAppDelegate.m; sourceTree = "<group>"; };
 		7352AB4213AA4C8600B65CBF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		7352AB4413AA4C8600B65CBF /* UserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
-		7352AB4513AA4C8600B65CBF /* UserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
-		7352AB4813AA4C8600B65CBF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UserView.xib; sourceTree = "<group>"; };
+		7352AB4813AA4C8600B65CBF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailView.xib; sourceTree = "<group>"; };
 		7352AB4A13AA4C8600B65CBF /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		7352AB4B13AA4C8600B65CBF /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		7352AB5613AA57E200B65CBF /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
@@ -79,6 +93,7 @@
 		7352AB6713AA584600B65CBF /* SPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPUser.m; sourceTree = "<group>"; };
 		7352AB6A13AA8E7D00B65CBF /* StackExchangeAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackExchangeAPI.h; sourceTree = "<group>"; };
 		7352AB6B13AA8E7D00B65CBF /* StackExchangeAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackExchangeAPI.m; sourceTree = "<group>"; };
+		73BFB89213B0E55700C8E501 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73BFB89313B0E55700C8E501 /* QuartzCore.framework in Frameworks */,
 				7352AB3013AA4C8600B65CBF /* UIKit.framework in Frameworks */,
 				7352AB3213AA4C8600B65CBF /* Foundation.framework in Frameworks */,
 				7352AB3413AA4C8600B65CBF /* CoreGraphics.framework in Frameworks */,
@@ -108,9 +124,25 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		7344B8C013AFBDF800F4B9CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7344B8D113AFC32B00F4B9CB /* badge.png */,
+				7344B8C913AFC2D000F4B9CB /* comments.png */,
+				7344B8CF13AFC30B00F4B9CB /* questions.png */,
+				7344B8CB13AFC2F000F4B9CB /* badges.png */,
+				7344B8CD13AFC2FD00F4B9CB /* answers.png */,
+				7344B8C713AFC2AD00F4B9CB /* users.png */,
+				7344B8C313AFC28600F4B9CB /* tags.png */,
+				7344B8C113AFBEF400F4B9CB /* Categories.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		7352AB2013AA4C8500B65CBF = {
 			isa = PBXGroup;
 			children = (
+				7344B8C013AFBDF800F4B9CB /* Resources */,
 				7352AB3513AA4C8600B65CBF /* StackPad */,
 				7352AB2E13AA4C8600B65CBF /* Frameworks */,
 				7352AB2C13AA4C8600B65CBF /* Products */,
@@ -128,6 +160,7 @@
 		7352AB2E13AA4C8600B65CBF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73BFB89213B0E55700C8E501 /* QuartzCore.framework */,
 				7352AB2F13AA4C8600B65CBF /* UIKit.framework */,
 				7352AB3113AA4C8600B65CBF /* Foundation.framework */,
 				7352AB3313AA4C8600B65CBF /* CoreGraphics.framework */,
@@ -179,8 +212,6 @@
 		7352AB5313AA4DFF00B65CBF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7352AB4413AA4C8600B65CBF /* UserViewController.h */,
-				7352AB4513AA4C8600B65CBF /* UserViewController.m */,
 				7352AB4A13AA4C8600B65CBF /* RootViewController.h */,
 				7352AB4B13AA4C8600B65CBF /* RootViewController.m */,
 				7344B8A613ABF9BD00F4B9CB /* SPBaseViewController.h */,
@@ -193,7 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				7352AB4113AA4C8600B65CBF /* MainWindow.xib */,
-				7352AB4713AA4C8600B65CBF /* UserView.xib */,
+				7352AB4713AA4C8600B65CBF /* DetailView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -278,7 +309,15 @@
 			files = (
 				7352AB3A13AA4C8600B65CBF /* InfoPlist.strings in Resources */,
 				7352AB4313AA4C8600B65CBF /* MainWindow.xib in Resources */,
-				7352AB4913AA4C8600B65CBF /* UserView.xib in Resources */,
+				7352AB4913AA4C8600B65CBF /* DetailView.xib in Resources */,
+				7344B8C213AFBEF400F4B9CB /* Categories.plist in Resources */,
+				7344B8C413AFC28600F4B9CB /* tags.png in Resources */,
+				7344B8C813AFC2AD00F4B9CB /* users.png in Resources */,
+				7344B8CA13AFC2D000F4B9CB /* comments.png in Resources */,
+				7344B8CC13AFC2F100F4B9CB /* badges.png in Resources */,
+				7344B8CE13AFC2FE00F4B9CB /* answers.png in Resources */,
+				7344B8D013AFC30B00F4B9CB /* questions.png in Resources */,
+				7344B8D213AFC32B00F4B9CB /* badge.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +330,6 @@
 			files = (
 				7352AB3D13AA4C8600B65CBF /* main.m in Sources */,
 				7352AB4013AA4C8600B65CBF /* StackPadAppDelegate.m in Sources */,
-				7352AB4613AA4C8600B65CBF /* UserViewController.m in Sources */,
 				7352AB4C13AA4C8600B65CBF /* RootViewController.m in Sources */,
 				7352AB6113AA57E200B65CBF /* NSObject+SBJSON.m in Sources */,
 				7352AB6213AA57E200B65CBF /* NSString+SBJSON.m in Sources */,
@@ -329,12 +367,12 @@
 			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
-		7352AB4713AA4C8600B65CBF /* UserView.xib */ = {
+		7352AB4713AA4C8600B65CBF /* DetailView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7352AB4813AA4C8600B65CBF /* en */,
 			);
-			name = UserView.xib;
+			name = DetailView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

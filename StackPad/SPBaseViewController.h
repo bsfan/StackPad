@@ -8,13 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SPBaseViewController : UIViewController {
-    @public
-    BOOL contentLoaded;
+@interface SPBaseViewController : UIViewController<UITableViewDelegate,UITableViewDataSource> {
+    IBOutlet UIView* dataView;
+    IBOutlet UILabel* titleLabel;
+    IBOutlet UILabel* subtitleLabel;
+    IBOutlet UITableView* tableView;
 }
 
--(void) setDetailItem:(id)item;
+-(void) setDetailItem:(id)newDetailItem;
 
-@property (nonatomic) BOOL contentLoaded;
+@property (nonatomic, retain) IBOutlet UIView* dataView;
+@property (nonatomic, retain) IBOutlet UILabel* titleLabel;
+@property (nonatomic, retain) IBOutlet UILabel* subtitleLabel;
+@property (nonatomic, retain) IBOutlet UITableView* tableView;
+@property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
+
+@property (nonatomic, retain) id detailItem;
 
 @end

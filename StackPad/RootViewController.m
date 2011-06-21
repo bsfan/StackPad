@@ -7,14 +7,13 @@
 //
 
 #import "RootViewController.h"
-#import "UserViewController.h"
 #import "SPUser.h"
 #import "StackExchangeAPI.h"
 
 @implementation RootViewController
 		
-@synthesize contentView;
-@synthesize users;
+@synthesize contentViewController;
+@synthesize categories;
 
 - (void)viewDidLoad
 {
@@ -23,14 +22,19 @@
     self.clearsSelectionOnViewWillAppear = NO;
     self.contentSizeForViewInPopover = CGSizeMake(260.0, 500.0);
     
-    [NSThread detachNewThreadSelector:@selector(updateUsersArray) toTarget:self withObject:nil];
+    self.categories = [[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Categories" ofType:@"plist"]] retain];
+    //[NSThread detachNewThreadSelector:@selector(updateUsersArray) toTarget:self withObject:nil];
 }
 
-- (void) updateUsersArray {
-    self.users = [StackExchangeAPI getAllUsers];
-    [self.contentView setDetailItem:[self.users objectAtIndex:0]];
-    [[self tableView] setNeedsLayout];
+-(void) openDetailView:(NSInteger *)view {
+    
 }
+
+//- (void) updateUsersArray {
+    //self.users = [StackExchangeAPI getAllUsers];
+    //[self.contentView setDetailItem:[self.users objectAtIndex:0]];
+    //[[self tableView] setNeedsLayout];
+//}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -64,16 +68,13 @@
 		
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (self.users != nil && [self.users count] > 0) {
-        return [self.users count];
-    }
-    return 0;
+    return [categories count];
 }
 
 		
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"CellIdentifier";
+    static NSString *CellIdentifier = @"CategoryCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
@@ -82,8 +83,15 @@
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
 
+    NSDictionary* rowDict = (NSDictionary*) [categories objectAtIndex:indexPath.row];
+    
+    NSString* label = [rowDict objectForKey:@"label"];
+    NSString* imageLocation = [[NSBundle mainBundle] pathForResource:[rowDict objectForKey:@"image"] ofType:@"png"];
+    UIImage* image = [[UIImage alloc] initWithContentsOfFile:imageLocation];
+    
     // Configure the cell.
-    cell.textLabel.text = [(SPUser*)[self.users objectAtIndex:indexPath.row] displayName];
+    [[cell imageView] setImage:image];
+    cell.textLabel.text = label;
     return cell;
 }
 
@@ -118,9 +126,13 @@
 }
 */
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.contentView setDetailItem:[self.users objectAtIndex:indexPath.row]];
+    if ([indexPath row] == 0) {
+        [contentViewController setDetailItem:[StackExchangeAPI getAllUsers]];
+    }
+    // [self.contentView setDetailItem:[self.users objectAtIndex:indexPath.row]];
     // Navigation logic may go here -- for example, create and push another view controller.
     /*
      DetailViewController *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@ <#Nib name#>" bundle:nil];
@@ -148,7 +160,7 @@
 
 - (void)dealloc
 {
-    [contentView release];
+    [contentViewController release];
     [super dealloc];
 }
 

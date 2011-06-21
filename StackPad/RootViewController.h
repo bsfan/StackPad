@@ -13,13 +13,12 @@
 @class UserViewController;
 
 @interface RootViewController : UITableViewController<UITableViewDataSource> {
-    NSMutableArray *users;
+    NSMutableArray *categories;
 }
 
-// Get an array of users
-- (void) updateUsersArray;
+-(void) openDetailView:(NSInteger*)view;
 
-@property (nonatomic, retain) IBOutlet SPBaseViewController *contentView;
-@property (nonatomic, retain) NSMutableArray *users;
+@property (nonatomic, retain) IBOutlet SPBaseViewController *contentViewController;
+@property (nonatomic, retain) NSMutableArray *categories;
 
 @end
