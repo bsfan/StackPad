@@ -38,7 +38,7 @@
 		7352AB6513AA57E200B65CBF /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7352AB6013AA57E200B65CBF /* SBJsonWriter.m */; };
 		7352AB6813AA584600B65CBF /* SPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7352AB6713AA584600B65CBF /* SPUser.m */; };
 		7352AB6C13AA8E7D00B65CBF /* StackExchangeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7352AB6B13AA8E7D00B65CBF /* StackExchangeAPI.m */; };
-		73BFB89313B0E55700C8E501 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BFB89213B0E55700C8E501 /* QuartzCore.framework */; };
+		735D788613B0FD9E000A3EDA /* SPType.m in Sources */ = {isa = PBXBuildFile; fileRef = 735D788513B0FD9E000A3EDA /* SPType.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,7 +93,8 @@
 		7352AB6713AA584600B65CBF /* SPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPUser.m; sourceTree = "<group>"; };
 		7352AB6A13AA8E7D00B65CBF /* StackExchangeAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackExchangeAPI.h; sourceTree = "<group>"; };
 		7352AB6B13AA8E7D00B65CBF /* StackExchangeAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackExchangeAPI.m; sourceTree = "<group>"; };
-		73BFB89213B0E55700C8E501 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		735D788413B0FD9E000A3EDA /* SPType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPType.h; sourceTree = "<group>"; };
+		735D788513B0FD9E000A3EDA /* SPType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPType.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73BFB89313B0E55700C8E501 /* QuartzCore.framework in Frameworks */,
 				7352AB3013AA4C8600B65CBF /* UIKit.framework in Frameworks */,
 				7352AB3213AA4C8600B65CBF /* Foundation.framework in Frameworks */,
 				7352AB3413AA4C8600B65CBF /* CoreGraphics.framework in Frameworks */,
@@ -160,7 +160,6 @@
 		7352AB2E13AA4C8600B65CBF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				73BFB89213B0E55700C8E501 /* QuartzCore.framework */,
 				7352AB2F13AA4C8600B65CBF /* UIKit.framework */,
 				7352AB3113AA4C8600B65CBF /* Foundation.framework */,
 				7352AB3313AA4C8600B65CBF /* CoreGraphics.framework */,
@@ -205,6 +204,8 @@
 				7344B89713ABCFB800F4B9CB /* SPError.m */,
 				7344B89913ABD07D00F4B9CB /* SPTag.h */,
 				7344B89A13ABD07E00F4B9CB /* SPTag.m */,
+				735D788413B0FD9E000A3EDA /* SPType.h */,
+				735D788513B0FD9E000A3EDA /* SPType.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -345,6 +346,7 @@
 				7344B89813ABCFB900F4B9CB /* SPError.m in Sources */,
 				7344B89B13ABD07E00F4B9CB /* SPTag.m in Sources */,
 				7344B8A813ABF9BD00F4B9CB /* SPBaseViewController.m in Sources */,
+				735D788613B0FD9E000A3EDA /* SPType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

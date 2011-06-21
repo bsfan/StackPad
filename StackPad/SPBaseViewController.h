@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StackExchangeAPI.h"
 
 @interface SPBaseViewController : UIViewController<UITableViewDelegate,UITableViewDataSource> {
     IBOutlet UIView* dataView;
@@ -15,7 +16,7 @@
     IBOutlet UITableView* tableView;
 }
 
--(void) setDetailItem:(id)newDetailItem;
+-(void) setDetailItem:(id)newDetailItem type:(int)type;
 
 @property (nonatomic, retain) IBOutlet UIView* dataView;
 @property (nonatomic, retain) IBOutlet UILabel* titleLabel;
@@ -24,5 +25,6 @@
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 
 @property (nonatomic, retain) id detailItem;
+@property (nonatomic) int type;
 
 @end

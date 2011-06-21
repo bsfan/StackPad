@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SPUser.h"
+#import "StackExchangeAPI.h"
 #import "SPBaseViewController.h"
 
 @class UserViewController;

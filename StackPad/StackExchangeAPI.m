@@ -7,8 +7,6 @@
 //
 
 #import "StackExchangeAPI.h"
-#import "JSON.h"
-#import "SPUser.h"
 
 @implementation StackExchangeAPI
 
@@ -54,7 +52,7 @@ NSString* const StackExchangeApiTags = @"tags";
     NSDictionary* userDict = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiUsers];
     
     // Get an array of users
-    NSArray *userArray = (NSArray*)[userDict valueForKey:@"users"];
+    NSArray *userArray = (NSArray*)[userDict valueForKey:StackExchangeApiUsers];
     
     // Loop over these objects and assign them to the mutable array as users
     int index;
@@ -70,11 +68,22 @@ NSString* const StackExchangeApiTags = @"tags";
 }
 
 +(NSMutableArray*) getAllQuestions {
+    NSDictionary* questionDict = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiQuestions];
     
-}
-
-+(NSMutableArray*) getAllQuestionsForUser:(id)user {
+    // Get an array of users
+    NSArray *questionArray = (NSArray*)[questionDict valueForKey:StackExchangeApiQuestions];
     
+    // Loop over these objects and assign them to the mutable array as users
+    int index;
+    NSDictionary *singleQuestionDict;
+    NSMutableArray* questions = [[NSMutableArray alloc] initWithCapacity:questionArray.count];
+    
+    for (index = 0; index < questionArray.count; index++) {
+        singleQuestionDict = (NSDictionary*) [questionArray objectAtIndex:index];
+        [questions insertObject:[SPQuestion initWithDictionary:singleQuestionDict] atIndex:index];
+    }
+    
+    return questions;
 }
 
 @end

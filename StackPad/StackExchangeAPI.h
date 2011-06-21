@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JSON.h"
 #import "SPUser.h"
+#import "SPQuestion.h"
+#import "SPAnswer.h"
+#import "SPComment.h"
+#import "SPBadge.h"
+#import "SPTag.h"
+#import "SPType.h"
 
 // Url to current StackExchange API server
 extern NSString* const StackExchangeApiUrl;
@@ -31,6 +38,5 @@ extern NSString* const StackExchangeApiTags;
 
 +(NSMutableArray*) getAllUsers;
 +(NSMutableArray*) getAllQuestions;
-+(NSMutableArray*) getAllQuestionsForUser:(SPUser*)user;
 
 @end

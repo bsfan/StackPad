@@ -7,7 +7,6 @@
 //
 
 #import "RootViewController.h"
-#import "SPUser.h"
 #import "StackExchangeAPI.h"
 
 @implementation RootViewController
@@ -23,6 +22,8 @@
     self.contentSizeForViewInPopover = CGSizeMake(260.0, 500.0);
     
     self.categories = [[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Categories" ofType:@"plist"]] retain];
+    self.tableView.separatorColor = [UIColor whiteColor];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
     //[NSThread detachNewThreadSelector:@selector(updateUsersArray) toTarget:self withObject:nil];
 }
 
@@ -130,7 +131,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([indexPath row] == 0) {
-        [contentViewController setDetailItem:[StackExchangeAPI getAllUsers]];
+        [contentViewController setDetailItem:[StackExchangeAPI getAllUsers] type:SPTypeUser];
+    }
+    else if ([indexPath row] == 1) {
+        [contentViewController setDetailItem:[StackExchangeAPI getAllQuestions] type:SPTypeQuestion];
     }
     // [self.contentView setDetailItem:[self.users objectAtIndex:indexPath.row]];
     // Navigation logic may go here -- for example, create and push another view controller.

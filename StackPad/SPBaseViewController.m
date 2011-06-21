@@ -7,7 +7,6 @@
 //
 
 #import "SPBaseViewController.h"
-#import "SPUser.h"
 
 @interface SPBaseViewController ()
 @property (nonatomic, retain) UIPopoverController *popoverController;
@@ -23,11 +22,13 @@
 @synthesize toolbar;
 @synthesize detailItem;
 @synthesize popoverController;
+@synthesize type;
 
-- (void)setDetailItem:(id)newDetailItem {
+- (void)setDetailItem:(id)newDetailItem type:(int)newType {
     if (detailItem != newDetailItem) {
         [detailItem release];
         detailItem = [newDetailItem retain];
+        self.type = newType;
         
         // Update the view.
         [self configureView];
@@ -52,7 +53,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"UserCell";
-    
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
