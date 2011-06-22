@@ -40,6 +40,8 @@
 		7352AB6C13AA8E7D00B65CBF /* StackExchangeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7352AB6B13AA8E7D00B65CBF /* StackExchangeAPI.m */; };
 		735D788613B0FD9E000A3EDA /* SPType.m in Sources */ = {isa = PBXBuildFile; fileRef = 735D788513B0FD9E000A3EDA /* SPType.m */; };
 		73B52E7E13B112E400BA3220 /* SPBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B52E7D13B112E400BA3220 /* SPBaseModel.m */; };
+		73B52E8013B13B3F00BA3220 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B52E7F13B13B3F00BA3220 /* QuartzCore.framework */; };
+		73B52E8313B160B400BA3220 /* SPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B52E8213B160B400BA3220 /* SPTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +100,9 @@
 		735D788513B0FD9E000A3EDA /* SPType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPType.m; sourceTree = "<group>"; };
 		73B52E7C13B112E300BA3220 /* SPBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBaseModel.h; sourceTree = "<group>"; };
 		73B52E7D13B112E400BA3220 /* SPBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBaseModel.m; sourceTree = "<group>"; };
+		73B52E7F13B13B3F00BA3220 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		73B52E8113B160B400BA3220 /* SPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTableViewCell.h; sourceTree = "<group>"; };
+		73B52E8213B160B400BA3220 /* SPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73B52E8013B13B3F00BA3220 /* QuartzCore.framework in Frameworks */,
 				7352AB3013AA4C8600B65CBF /* UIKit.framework in Frameworks */,
 				7352AB3213AA4C8600B65CBF /* Foundation.framework in Frameworks */,
 				7352AB3413AA4C8600B65CBF /* CoreGraphics.framework in Frameworks */,
@@ -158,6 +164,7 @@
 		7352AB2E13AA4C8600B65CBF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73B52E7F13B13B3F00BA3220 /* QuartzCore.framework */,
 				7352AB2F13AA4C8600B65CBF /* UIKit.framework */,
 				7352AB3113AA4C8600B65CBF /* Foundation.framework */,
 				7352AB3313AA4C8600B65CBF /* CoreGraphics.framework */,
@@ -224,6 +231,8 @@
 		7352AB5413AA4E0C00B65CBF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				73B52E8113B160B400BA3220 /* SPTableViewCell.h */,
+				73B52E8213B160B400BA3220 /* SPTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -369,6 +378,7 @@
 				7344B8A813ABF9BD00F4B9CB /* SPBaseViewController.m in Sources */,
 				735D788613B0FD9E000A3EDA /* SPType.m in Sources */,
 				73B52E7E13B112E400BA3220 /* SPBaseModel.m in Sources */,
+				73B52E8313B160B400BA3220 /* SPTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

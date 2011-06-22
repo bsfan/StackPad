@@ -59,20 +59,9 @@ NSString* const SPAnswerTitle = @"title";
     return answer;
 }
 
--(UITableViewCell*) getUITableCellInTable:(UITableView*)table {
-    static NSString *CellIdentifier = @"AnswerCell";
-    UITableViewCell *cell = nil;  
-    
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
-    
-    NSString* label = [self title];
-    cell.textLabel.text = label;
-    cell.textLabel.font = [UIFont systemFontOfSize:16.0];
-    
-    return cell;
+-(SPTableViewCell*) getUITableCellInTable:(UITableView*)table {
+    NSString* subtitle = [NSString stringWithFormat:@"%d points", [self score]];
+    return [self getUITableCellInTable:table withTitle:[self title] andSubTitle:subtitle];
 }
 
 @end

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SPBaseModel.h"
 
+// Represents a comment from the Stack Exchange API
 @interface SPComment : SPBaseModel {
     
 }

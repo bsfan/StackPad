@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SPBaseModel.h"
 
+// Represents a badge from the StackExchange API
 @interface SPBadge : SPBaseModel {
     
 }

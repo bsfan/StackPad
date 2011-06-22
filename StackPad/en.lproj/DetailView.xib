@@ -105,8 +105,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBUILabel" id="926619411">
 								<reference key="NSNextResponder" ref="570255570"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{10, 17}, {206, 38}}</string>
+								<int key="NSvFlags">290</int>
+								<string key="NSFrame">{{10, 17}, {743, 38}}</string>
 								<reference key="NSSuperview" ref="570255570"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="477451441"/>
@@ -127,12 +127,13 @@
 								</object>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">1</int>
+								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 								<float key="IBUIMinimumFontSize">10</float>
 							</object>
 							<object class="IBUILabel" id="477451441">
 								<reference key="NSNextResponder" ref="570255570"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{10, 48}, {233, 21}}</string>
+								<int key="NSvFlags">290</int>
+								<string key="NSFrame">{{10, 48}, {743, 21}}</string>
 								<reference key="NSSuperview" ref="570255570"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="758911330"/>
@@ -153,6 +154,7 @@
 								</object>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">1</int>
+								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 								<float key="IBUIMinimumFontSize">10</float>
 							</object>
 						</object>
@@ -245,6 +247,14 @@
 						<reference key="destination" ref="832288005"/>
 					</object>
 					<int key="connectionID">107</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">headerView</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="570255570"/>
+					</object>
+					<int key="connectionID">108</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -365,7 +375,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">107</int>
+			<int key="maxID">108</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -379,6 +389,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>baseTableView</string>
 							<string>dataView</string>
+							<string>headerView</string>
 							<string>subtitleLabel</string>
 							<string>titleLabel</string>
 							<string>toolbar</string>
@@ -386,6 +397,7 @@
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UITableView</string>
+							<string>UIView</string>
 							<string>UIView</string>
 							<string>UILabel</string>
 							<string>UILabel</string>
@@ -398,6 +410,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>baseTableView</string>
 							<string>dataView</string>
+							<string>headerView</string>
 							<string>subtitleLabel</string>
 							<string>titleLabel</string>
 							<string>toolbar</string>
@@ -410,6 +423,10 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">dataView</string>
+								<string key="candidateClassName">UIView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">headerView</string>
 								<string key="candidateClassName">UIView</string>
 							</object>
 							<object class="IBToOneOutletInfo">

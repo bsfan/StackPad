@@ -8,12 +8,22 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
+#import "SPTableViewCell.h"
 
 @interface SPBaseModel : NSObject {
     
 }
 
--(UITableViewCell*) getUITableCellInTable:(UITableView*)table;
+// Get a UITableViewCell for a table 
+-(SPTableViewCell*) getUITableCellInTable:(UITableView*)table;
+
+// Get a UITableViewCell for a table with a particular title
+-(SPTableViewCell*) getUITableCellInTable:(UITableView*)table 
+                                withTitle:(NSString*)title;
+
+// Get a UITableViewCell for a table with a particular title and subtitle
+-(SPTableViewCell*) getUITableCellInTable:(UITableView*)table 
+                                withTitle:(NSString*)title 
+                              andSubTitle:(NSString*)subtitle;
 
 @end

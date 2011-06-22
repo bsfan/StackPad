@@ -25,6 +25,7 @@ extern NSString* const SPAnswerScore;
 extern NSString* const SPAnswerCommunityOwned;
 extern NSString* const SPAnswerTitle;
 
+// Represents an answer from the Stack Exchange API
 @interface SPAnswer : SPBaseModel {
     NSInteger* answerId;
     BOOL accepted;

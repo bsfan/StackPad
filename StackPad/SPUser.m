@@ -28,35 +28,23 @@ NSString* const SPUserAnswerCount = @"answer_count";
 @synthesize displayName;
 @synthesize questionCount;
 
-+ (SPUser*) initWithDictionary:(NSDictionary *)dict {
++(SPUser*) initWithDictionary:(NSDictionary *)dict {
     SPUser *user = [[[SPUser alloc] init] autorelease];
     user.aboutMe = (NSString*) [dict objectForKey:SPUserAboutMe];
     user.location = (NSString*) [dict objectForKey:SPUserLocation];
     user.websiteUrl = (NSString*) [dict objectForKey:SPUserWebsiteUrl];
     user.displayName = (NSString*) [dict objectForKey:SPUserDisplayName];
-    user.userId = (NSInteger*) [dict objectForKey:SPUserId];
+    user.userId = (NSInteger*) [[dict objectForKey:SPUserId] intValue];
     user.reputation = (NSInteger*) [[dict objectForKey:SPUserReputation] intValue];
     user.answerCount = (NSInteger*) [[dict objectForKey:SPUserAnswerCount] intValue];
     user.questionCount = (NSInteger*) [[dict objectForKey:SPUserQuestionCount] intValue];
     return user;
 }
 
--(UITableViewCell*) getUITableCellInTable:(UITableView*)table {
-    static NSString *CellIdentifier = @"UserCell";
-    UITableViewCell *cell = nil; //[table dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
-    
-    cell.textLabel.font = [UIFont systemFontOfSize:16.0];
-    cell.textLabel.text = [self displayName];
-    
-    cell.detailTextLabel.font = [UIFont systemFontOfSize:14.0];
-    cell.detailTextLabel.text = [self location];
-    
-    return cell;
+-(SPTableViewCell*) getUITableCellInTable:(UITableView*)table {
+    return [self getUITableCellInTable:table 
+                             withTitle:[self displayName] 
+                           andSubTitle:[self location]];
 }
 
 @end

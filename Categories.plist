@@ -9,34 +9,34 @@
 		<string>Top Users</string>
 	</dict>
 	<dict>
-		<key>label</key>
-		<string>Top Questions</string>
 		<key>image</key>
 		<string>questions</string>
+		<key>label</key>
+		<string>Recent Questions</string>
 	</dict>
 	<dict>
-		<key>label</key>
-		<string>Top Answers</string>
 		<key>image</key>
 		<string>answers</string>
+		<key>label</key>
+		<string>Recent Answers</string>
 	</dict>
 	<dict>
 		<key>image</key>
 		<string>comments</string>
 		<key>label</key>
-		<string>Top Comments</string>
+		<string>Recent Comments</string>
 	</dict>
 	<dict>
-		<key>label</key>
-		<string>Badges</string>
 		<key>image</key>
 		<string>badges</string>
+		<key>label</key>
+		<string>Badges</string>
 	</dict>
 	<dict>
-		<key>label</key>
-		<string>Tags</string>
 		<key>image</key>
 		<string>tags</string>
+		<key>label</key>
+		<string>Tags</string>
 	</dict>
 </array>
 </plist>

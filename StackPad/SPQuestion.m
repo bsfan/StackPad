@@ -58,25 +58,15 @@ NSString* const SPQuestionCommunityOwned = @"community_owned";
     question.upvoteCount = (NSInteger*) [dictionary objectForKey:SPQuestionUpvoteCount];
     question.downvoteCount = (NSInteger*) [dictionary objectForKey:SPQuestionDownvoteCount];
     question.viewCount = (NSInteger*) [dictionary objectForKey:SPQuestionViewCount];
-    question.score = (NSInteger*) [dictionary objectForKey:SPQuestionScore];
+    question.score = (NSInteger*) [[dictionary objectForKey:SPQuestionScore] intValue];
     question.title = (NSString*) [dictionary objectForKey:SPQuestionTitle];
     question.communityOwned = [[dictionary objectForKey:SPQuestionCommunityOwned] boolValue];
     return question;
 }
 
--(UITableViewCell*) getUITableCellInTable:(UITableView*)table {
-    static NSString *CellIdentifier = @"UserCell";
-    UITableViewCell *cell = nil;    
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
-    
-    NSString* label = [self title];
-    cell.textLabel.text = label;
-    cell.textLabel.font = [UIFont systemFontOfSize:16.0];
-    
-    return cell;
+-(SPTableViewCell*) getUITableCellInTable:(UITableView*)table {
+    NSString* subtitle = [NSString stringWithFormat:@"%d points", [self score]];
+    return [self getUITableCellInTable:table withTitle:[self title] andSubTitle:subtitle];
 }
 
 @end

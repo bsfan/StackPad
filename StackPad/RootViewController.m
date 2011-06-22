@@ -21,21 +21,19 @@
     self.clearsSelectionOnViewWillAppear = NO;
     self.contentSizeForViewInPopover = CGSizeMake(260.0, 500.0);
     
+    // Load up the list of categories
     self.categories = [[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Categories" ofType:@"plist"]] retain];
+    
+    // Style the tableview as necessary
     self.tableView.separatorColor = [UIColor whiteColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
+    
     //[NSThread detachNewThreadSelector:@selector(updateUsersArray) toTarget:self withObject:nil];
 }
 
 -(void) openDetailView:(NSInteger *)view {
     
 }
-
-//- (void) updateUsersArray {
-    //self.users = [StackExchangeAPI getAllUsers];
-    //[self.contentView setDetailItem:[self.users objectAtIndex:0]];
-    //[[self tableView] setNeedsLayout];
-//}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -86,47 +84,17 @@
 
     NSDictionary* rowDict = (NSDictionary*) [categories objectAtIndex:indexPath.row];
     
+    // Get the image and label for this row
     NSString* label = [rowDict objectForKey:@"label"];
     NSString* imageLocation = [[NSBundle mainBundle] pathForResource:[rowDict objectForKey:@"image"] ofType:@"png"];
     UIImage* image = [[UIImage alloc] initWithContentsOfFile:imageLocation];
     
-    // Configure the cell.
+    // Configure the cell and return it
     [[cell imageView] setImage:image];
     cell.textLabel.text = label;
+    
     return cell;
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source.
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -155,8 +123,6 @@
 {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-
-    // Relinquish ownership any cached data, images, etc that aren't in use.
 }
 
 - (void)viewDidUnload
