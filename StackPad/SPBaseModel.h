@@ -14,6 +14,8 @@
     
 }
 
+-(NSString*) getDetailedText;
+
 // Get a UITableViewCell for a table 
 -(SPTableViewCell*) getUITableCellInTable:(UITableView*)table;
 

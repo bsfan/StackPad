@@ -107,16 +107,6 @@
     else if ([indexPath row] == 2) {
         [contentViewController setDetailItem:[StackExchangeAPI getAllAnswers] type:SPTypeAnswer];
     }
-    // [self.contentView setDetailItem:[self.users objectAtIndex:indexPath.row]];
-    // Navigation logic may go here -- for example, create and push another view controller.
-    /*
-     DetailViewController *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@ <#Nib name#>" bundle:nil];
-     NSManagedObject *selectedObject = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
 }
 
 - (void)didReceiveMemoryWarning

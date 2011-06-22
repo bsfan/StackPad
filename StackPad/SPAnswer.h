@@ -24,6 +24,7 @@ extern NSString* const SPAnswerViewCount;
 extern NSString* const SPAnswerScore;
 extern NSString* const SPAnswerCommunityOwned;
 extern NSString* const SPAnswerTitle;
+extern NSString* const SPAnswerBody;
 
 // Represents an answer from the Stack Exchange API
 @interface SPAnswer : SPBaseModel {
@@ -41,6 +42,7 @@ extern NSString* const SPAnswerTitle;
     NSInteger* score;
     BOOL communityOwned;
     NSString* title;
+    NSString* body;
 }
 
 // Create a SPQuestion object from a dictionary
@@ -60,5 +62,6 @@ extern NSString* const SPAnswerTitle;
 @property (nonatomic) NSInteger* score;
 @property (nonatomic) BOOL communityOwned;
 @property (nonatomic, retain) NSString* title;
+@property (nonatomic, retain) NSString* body;
 
 @end

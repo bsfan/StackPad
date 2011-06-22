@@ -26,6 +26,7 @@ extern NSString* const SPQuestionDownvoteCount;
 extern NSString* const SPQuestionViewCount;
 extern NSString* const SPQuestionScore;
 extern NSString* const SPQuestionTitle;
+extern NSString* const SPQuestionBody;
 extern NSString* const SPQuestionCommunityOwned;
 
 // Represents a StackExchange question
@@ -45,6 +46,7 @@ extern NSString* const SPQuestionCommunityOwned;
     NSInteger* viewCount;
     NSInteger* score;
     NSString* title;
+    NSString* body;
     BOOL communityOwned;
 }
 
@@ -66,6 +68,7 @@ extern NSString* const SPQuestionCommunityOwned;
 @property (nonatomic) NSInteger* viewCount;
 @property (nonatomic) NSInteger* score;
 @property (nonatomic, retain) NSString* title;
+@property (nonatomic, retain) NSString* body;
 @property (nonatomic) BOOL communityOwned;
 
 @end

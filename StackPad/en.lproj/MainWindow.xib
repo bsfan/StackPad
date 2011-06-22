@@ -3,24 +3,14 @@
 	<data>
 		<int key="IBDocument.SystemTarget">800</int>
 		<string key="IBDocument.SystemVersion">10J869</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1306</string>
+		<string key="IBDocument.InterfaceBuilderVersion">844</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">301</string>
+			<string key="NS.object.0">141</string>
 		</object>
-		<array key="IBDocument.IntegratedClassDependencies">
-			<string>IBProxyObject</string>
-			<string>IBUINavigationController</string>
-			<string>IBUIViewController</string>
-			<string>IBUICustomObject</string>
-			<string>IBUISplitViewController</string>
-			<string>IBUIWindow</string>
-			<string>IBUITableViewController</string>
-			<string>IBUINavigationBar</string>
-			<string>IBUINavigationItem</string>
-		</array>
+		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs"/>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 		</array>
@@ -59,7 +49,6 @@
 					<int key="IBUIStatusBarStyle">2</int>
 				</object>
 				<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
-					<int key="IBUIInterfaceOrientation">3</int>
 					<int key="interfaceOrientation">3</int>
 				</object>
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -70,7 +59,6 @@
 						<int key="IBUIStatusBarStyle">2</int>
 					</object>
 					<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
-						<int key="IBUIInterfaceOrientation">1</int>
 						<int key="interfaceOrientation">1</int>
 					</object>
 					<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -86,7 +74,6 @@
 					<array class="NSMutableArray" key="IBUIViewControllers">
 						<object class="IBUITableViewController" id="720143809">
 							<object class="IBUINavigationItem" key="IBUINavigationItem" id="441316548">
-								<reference key="IBUINavigationBar"/>
 								<string key="IBUITitle">Stack Overflow</string>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 							</object>
@@ -95,7 +82,6 @@
 								<int key="IBUIStatusBarStyle">2</int>
 							</object>
 							<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
-								<int key="IBUIInterfaceOrientation">1</int>
 								<int key="interfaceOrientation">1</int>
 							</object>
 							<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -108,7 +94,6 @@
 					<reference key="IBUIParentViewController" ref="1001026670"/>
 					<string key="IBUINibName">DetailView</string>
 					<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
-						<int key="IBUIInterfaceOrientation">1</int>
 						<int key="interfaceOrientation">1</int>
 					</object>
 					<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -249,7 +234,7 @@
 				<string type="base64-UTF8" key="37.IBEditorWindowLastContentRect">e3s3OTQsIDU5NH0sIHsxMDI0LAo3Njh9fQ</string>
 				<string key="37.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="38.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="39.CustomClassName">SPBaseViewController</string>
+				<string key="39.CustomClassName">SPGenericViewController</string>
 				<string key="39.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="40.CustomClassName">RootViewController</string>
 				<string key="40.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -269,13 +254,13 @@
 					<string key="superclassName">UITableViewController</string>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">contentViewController</string>
-						<string key="NS.object.0">SPBaseViewController</string>
+						<string key="NS.object.0">SPGenericViewController</string>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<string key="NS.key.0">contentViewController</string>
 						<object class="IBToOneOutletInfo" key="NS.object.0">
 							<string key="name">contentViewController</string>
-							<string key="candidateClassName">SPBaseViewController</string>
+							<string key="candidateClassName">SPGenericViewController</string>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -284,7 +269,7 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">SPBaseViewController</string>
+					<string key="className">SPGenericViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="baseTableView">UITableView</string>
@@ -316,15 +301,15 @@
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/SPBaseViewController.h</string>
+						<string key="majorKey">IBUserSource</string>
+						<string key="minorKey"/>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">StackPadAppDelegate</string>
 					<string key="superclassName">NSObject</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="detailViewController">SPBaseViewController</string>
+						<string key="detailViewController">SPGenericViewController</string>
 						<string key="rootViewController">RootViewController</string>
 						<string key="splitViewController">UISplitViewController</string>
 						<string key="window">UIWindow</string>
@@ -332,7 +317,7 @@
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="detailViewController">
 							<string key="name">detailViewController</string>
-							<string key="candidateClassName">SPBaseViewController</string>
+							<string key="candidateClassName">SPGenericViewController</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="rootViewController">
 							<string key="name">rootViewController</string>
@@ -365,7 +350,8 @@
 			<integer value="3200" key="NS.object.0"/>
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
+		<nil key="IBDocument.LastKnownRelativeProjectPath"/>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<string key="IBCocoaTouchPluginVersion">301</string>
+		<string key="IBCocoaTouchPluginVersion">141</string>
 	</data>
 </archive>

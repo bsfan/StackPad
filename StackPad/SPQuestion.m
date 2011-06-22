@@ -25,6 +25,7 @@ NSString* const SPQuestionDownvoteCount = @"down_vote_count";
 NSString* const SPQuestionViewCount = @"view_count";
 NSString* const SPQuestionScore = @"score";
 NSString* const SPQuestionTitle = @"title";
+NSString* const SPQuestionBody = @"body";
 NSString* const SPQuestionCommunityOwned = @"community_owned";
 
 @synthesize questionId;
@@ -42,6 +43,7 @@ NSString* const SPQuestionCommunityOwned = @"community_owned";
 @synthesize viewCount;
 @synthesize score;
 @synthesize title;
+@synthesize body;
 @synthesize communityOwned;
 
 +(SPQuestion *)initWithDictionary:(NSDictionary *)dictionary {
@@ -60,8 +62,13 @@ NSString* const SPQuestionCommunityOwned = @"community_owned";
     question.viewCount = (NSInteger*) [dictionary objectForKey:SPQuestionViewCount];
     question.score = (NSInteger*) [[dictionary objectForKey:SPQuestionScore] intValue];
     question.title = (NSString*) [dictionary objectForKey:SPQuestionTitle];
+    question.body = (NSString*) [dictionary objectForKey:SPQuestionBody];
     question.communityOwned = [[dictionary objectForKey:SPQuestionCommunityOwned] boolValue];
     return question;
+}
+
+-(NSString*) getDetailedText {
+    return [self body];
 }
 
 -(SPTableViewCell*) getUITableCellInTable:(UITableView*)table {

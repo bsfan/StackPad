@@ -19,6 +19,9 @@
 // Url to current StackExchange API server
 extern NSString* const StackExchangeApiUrl;
 
+// API key
+extern NSString* const StackExchangeApiKey;
+
 // API Endpoints
 extern NSString* const StackExchangeApiUsers;
 extern NSString* const StackExchangeApiQuestions;

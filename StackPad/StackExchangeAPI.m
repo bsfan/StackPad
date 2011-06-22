@@ -11,6 +11,7 @@
 @implementation StackExchangeAPI
 
 NSString* const StackExchangeApiUrl = @"http://api.stackoverflow.com/1.1/";
+NSString* const StackExchangeApiKey = @"p06K0zTR8UCWLZayGuaKEg";
 NSString* const StackExchangeApiUsers = @"users";
 NSString* const StackExchangeApiQuestions = @"questions";
 NSString* const StackExchangeApiAnswers = @"answers";
@@ -41,7 +42,8 @@ NSString* const StackExchangeApiTags = @"tags";
 }
 
 + (NSDictionary*) getJsonFromEndpoint:(NSString*)endpoint {
-    NSString* urlString = [NSString stringWithFormat:@"%@%@",StackExchangeApiUrl,endpoint];
+    NSString* urlString = [NSString stringWithFormat:@"%@%@?key=%@&body=true",StackExchangeApiUrl,endpoint,StackExchangeApiKey];
+    NSLog(@"%@",urlString);
     NSURL* url = [NSURL URLWithString:urlString];
     id response = [StackExchangeAPI objectFromUrl:url];
     NSDictionary *dictionary = (NSDictionary *) response;

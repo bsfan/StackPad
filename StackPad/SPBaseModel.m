@@ -10,6 +10,10 @@
 
 @implementation SPBaseModel
 
+-(NSString*) getDetailedText {
+    return @"Details";
+}
+
 -(SPTableViewCell*) getUITableCellInTable:(UITableView*)table {
     // Do not implement, should be implemented by subclasses
     return nil;

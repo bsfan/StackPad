@@ -24,6 +24,7 @@ NSString* const SPAnswerViewCount = @"view_count";
 NSString* const SPAnswerScore = @"score";
 NSString* const SPAnswerCommunityOwned = @"community_owned";
 NSString* const SPAnswerTitle = @"title";
+NSString* const SPAnswerBody = @"body";
 
 @synthesize answerId;
 @synthesize accepted;
@@ -39,6 +40,11 @@ NSString* const SPAnswerTitle = @"title";
 @synthesize score;
 @synthesize communityOwned;
 @synthesize title;
+@synthesize body;
+
+-(NSString*) getDetailedText {
+    return [self body];
+}
 
 +(SPAnswer *)initWithDictionary:(NSDictionary *)dictionary {
     SPAnswer* answer = [[[SPAnswer alloc] init] autorelease];
@@ -56,6 +62,7 @@ NSString* const SPAnswerTitle = @"title";
     answer.score = (NSInteger*) [[dictionary objectForKey:SPAnswerScore] intValue];
     answer.communityOwned = [[dictionary objectForKey:SPAnswerCommunityOwned] boolValue];
     answer.title = [[dictionary objectForKey:SPAnswerTitle] stringValue];
+    answer.body = [[dictionary objectForKey:SPAnswerBody] stringValue];
     return answer;
 }
 

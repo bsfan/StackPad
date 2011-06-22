@@ -13,7 +13,7 @@
 		7344B89513ABCFAE00F4B9CB /* SPBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 7344B89413ABCFAE00F4B9CB /* SPBadge.m */; };
 		7344B89813ABCFB900F4B9CB /* SPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7344B89713ABCFB800F4B9CB /* SPError.m */; };
 		7344B89B13ABD07E00F4B9CB /* SPTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 7344B89A13ABD07E00F4B9CB /* SPTag.m */; };
-		7344B8A813ABF9BD00F4B9CB /* SPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7344B8A713ABF9BD00F4B9CB /* SPBaseViewController.m */; };
+		7344B8A813ABF9BD00F4B9CB /* SPGenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7344B8A713ABF9BD00F4B9CB /* SPGenericViewController.m */; };
 		7344B8C213AFBEF400F4B9CB /* Categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7344B8C113AFBEF400F4B9CB /* Categories.plist */; };
 		7344B8C413AFC28600F4B9CB /* tags.png in Resources */ = {isa = PBXBuildFile; fileRef = 7344B8C313AFC28600F4B9CB /* tags.png */; };
 		7344B8C813AFC2AD00F4B9CB /* users.png in Resources */ = {isa = PBXBuildFile; fileRef = 7344B8C713AFC2AD00F4B9CB /* users.png */; };
@@ -42,6 +42,8 @@
 		73B52E7E13B112E400BA3220 /* SPBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B52E7D13B112E400BA3220 /* SPBaseModel.m */; };
 		73B52E8013B13B3F00BA3220 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B52E7F13B13B3F00BA3220 /* QuartzCore.framework */; };
 		73B52E8313B160B400BA3220 /* SPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B52E8213B160B400BA3220 /* SPTableViewCell.m */; };
+		73B52E8613B2344100BA3220 /* SPBaseModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B52E8513B2344100BA3220 /* SPBaseModelViewController.m */; };
+		73B52E8813B2431E00BA3220 /* QuestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73B52E8713B2431E00BA3220 /* QuestionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,8 +59,8 @@
 		7344B89713ABCFB800F4B9CB /* SPError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPError.m; sourceTree = "<group>"; };
 		7344B89913ABD07D00F4B9CB /* SPTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTag.h; sourceTree = "<group>"; };
 		7344B89A13ABD07E00F4B9CB /* SPTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTag.m; sourceTree = "<group>"; };
-		7344B8A613ABF9BD00F4B9CB /* SPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBaseViewController.h; sourceTree = "<group>"; };
-		7344B8A713ABF9BD00F4B9CB /* SPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBaseViewController.m; sourceTree = "<group>"; };
+		7344B8A613ABF9BD00F4B9CB /* SPGenericViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGenericViewController.h; sourceTree = "<group>"; };
+		7344B8A713ABF9BD00F4B9CB /* SPGenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGenericViewController.m; sourceTree = "<group>"; };
 		7344B8C113AFBEF400F4B9CB /* Categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Categories.plist; sourceTree = "<group>"; };
 		7344B8C313AFC28600F4B9CB /* tags.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tags.png; sourceTree = "<group>"; };
 		7344B8C713AFC2AD00F4B9CB /* users.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = users.png; sourceTree = "<group>"; };
@@ -103,6 +105,9 @@
 		73B52E7F13B13B3F00BA3220 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		73B52E8113B160B400BA3220 /* SPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTableViewCell.h; sourceTree = "<group>"; };
 		73B52E8213B160B400BA3220 /* SPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTableViewCell.m; sourceTree = "<group>"; };
+		73B52E8413B2344100BA3220 /* SPBaseModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBaseModelViewController.h; sourceTree = "<group>"; };
+		73B52E8513B2344100BA3220 /* SPBaseModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBaseModelViewController.m; sourceTree = "<group>"; };
+		73B52E8713B2431E00BA3220 /* QuestionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,8 +227,10 @@
 			children = (
 				7352AB4A13AA4C8600B65CBF /* RootViewController.h */,
 				7352AB4B13AA4C8600B65CBF /* RootViewController.m */,
-				7344B8A613ABF9BD00F4B9CB /* SPBaseViewController.h */,
-				7344B8A713ABF9BD00F4B9CB /* SPBaseViewController.m */,
+				7344B8A613ABF9BD00F4B9CB /* SPGenericViewController.h */,
+				7344B8A713ABF9BD00F4B9CB /* SPGenericViewController.m */,
+				73B52E8413B2344100BA3220 /* SPBaseModelViewController.h */,
+				73B52E8513B2344100BA3220 /* SPBaseModelViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -284,6 +291,7 @@
 			children = (
 				7352AB4113AA4C8600B65CBF /* MainWindow.xib */,
 				7352AB4713AA4C8600B65CBF /* DetailView.xib */,
+				73B52E8713B2431E00BA3220 /* QuestionView.xib */,
 			);
 			name = Layouts;
 			sourceTree = "<group>";
@@ -349,6 +357,7 @@
 				7344B8CE13AFC2FE00F4B9CB /* answers.png in Resources */,
 				7344B8D013AFC30B00F4B9CB /* questions.png in Resources */,
 				7344B8D213AFC32B00F4B9CB /* badge.png in Resources */,
+				73B52E8813B2431E00BA3220 /* QuestionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,10 +384,11 @@
 				7344B89513ABCFAE00F4B9CB /* SPBadge.m in Sources */,
 				7344B89813ABCFB900F4B9CB /* SPError.m in Sources */,
 				7344B89B13ABD07E00F4B9CB /* SPTag.m in Sources */,
-				7344B8A813ABF9BD00F4B9CB /* SPBaseViewController.m in Sources */,
+				7344B8A813ABF9BD00F4B9CB /* SPGenericViewController.m in Sources */,
 				735D788613B0FD9E000A3EDA /* SPType.m in Sources */,
 				73B52E7E13B112E400BA3220 /* SPBaseModel.m in Sources */,
 				73B52E8313B160B400BA3220 /* SPTableViewCell.m in Sources */,
+				73B52E8613B2344100BA3220 /* SPBaseModelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
