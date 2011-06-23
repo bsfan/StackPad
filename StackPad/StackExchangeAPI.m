@@ -51,60 +51,79 @@ NSString* const StackExchangeApiTags = @"tags";
 }
 
 +(NSMutableArray*) getAllUsers {
-    NSDictionary* userDict = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiUsers];
+    NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiUsers];
     
     // Get an array of users
-    NSArray *userArray = (NSArray*)[userDict valueForKey:StackExchangeApiUsers];
+    NSArray *objectArray = (NSArray*)[objectDictionary valueForKey:StackExchangeApiUsers];
     
     // Loop over these objects and assign them to the mutable array as users
     int index;
-    NSDictionary *singleUserDict;
-    NSMutableArray* users = [[NSMutableArray alloc] initWithCapacity:userArray.count];
+    NSDictionary *singleObjectDict;
+    NSMutableArray* objects = [[NSMutableArray alloc] initWithCapacity:objectArray.count];
     
-    for (index = 0; index < userArray.count; index++) {
-        singleUserDict = (NSDictionary*) [userArray objectAtIndex:index];
-        [users insertObject:[SPUser initWithDictionary:singleUserDict] atIndex:index];
+    for (index = 0; index < objectArray.count; index++) {
+        singleObjectDict = (NSDictionary*) [objectArray objectAtIndex:index];
+        [objects insertObject:[SPUser initWithDictionary:singleObjectDict] atIndex:index];
     }
     
-    return users;
+    return objects;
 }
 
 +(NSMutableArray*) getAllQuestions {
-    NSDictionary* questionDict = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiQuestions];
+    NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiQuestions];
     
     // Get an array of users
-    NSArray *questionArray = (NSArray*)[questionDict valueForKey:StackExchangeApiQuestions];
+    NSArray *objectArray = (NSArray*)[objectDictionary valueForKey:StackExchangeApiQuestions];
     
     // Loop over these objects and assign them to the mutable array as users
     int index;
-    NSDictionary *singleQuestionDict;
-    NSMutableArray* questions = [[NSMutableArray alloc] initWithCapacity:questionArray.count];
+    NSDictionary *singleObjectDict;
+    NSMutableArray* objects = [[NSMutableArray alloc] initWithCapacity:objectArray.count];
     
-    for (index = 0; index < questionArray.count; index++) {
-        singleQuestionDict = (NSDictionary*) [questionArray objectAtIndex:index];
-        [questions insertObject:[SPQuestion initWithDictionary:singleQuestionDict] atIndex:index];
+    for (index = 0; index < objectArray.count; index++) {
+        singleObjectDict = (NSDictionary*) [objectArray objectAtIndex:index];
+        [objects insertObject:[SPQuestion initWithDictionary:singleObjectDict] atIndex:index];
     }
     
-    return questions;
+    return objects;
 }
 
 +(NSMutableArray*) getAllAnswers {
-    NSDictionary* answerDict = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiAnswers];
+    NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiAnswers];
     
     // Get an array of users
-    NSArray *answerArray = (NSArray*)[answerDict valueForKey:StackExchangeApiAnswers];
+    NSArray *objectArray = (NSArray*)[objectDictionary valueForKey:StackExchangeApiAnswers];
     
     // Loop over these objects and assign them to the mutable array as users
     int index;
-    NSDictionary *singleAnswerDict;
-    NSMutableArray* answers = [[NSMutableArray alloc] initWithCapacity:answerArray.count];
+    NSDictionary *singleObjectDict;
+    NSMutableArray* objects = [[NSMutableArray alloc] initWithCapacity:objectArray.count];
     
-    for (index = 0; index < answerArray.count; index++) {
-        singleAnswerDict = (NSDictionary*) [answerArray objectAtIndex:index];
-        [answers insertObject:[SPQuestion initWithDictionary:singleAnswerDict] atIndex:index];
+    for (index = 0; index < objectArray.count; index++) {
+        singleObjectDict = (NSDictionary*) [objectArray objectAtIndex:index];
+        [objects insertObject:[SPAnswer initWithDictionary:singleObjectDict] atIndex:index];
     }
     
-    return answers;
+    return objects;
+}
+
++(NSMutableArray*) getAllComments {
+    NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiComments];
+    
+    // Get an array of users
+    NSArray *objectArray = (NSArray*)[objectDictionary valueForKey:StackExchangeApiComments];
+    
+    // Loop over these objects and assign them to the mutable array as users
+    int index;
+    NSDictionary *singleObjectDict;
+    NSMutableArray* objects = [[NSMutableArray alloc] initWithCapacity:objectArray.count];
+    
+    for (index = 0; index < objectArray.count; index++) {
+        singleObjectDict = (NSDictionary*) [objectArray objectAtIndex:index];
+        [objects insertObject:[SPComment initWithDictionary:singleObjectDict] atIndex:index];
+    }
+    
+    return objects;
 }
 
 @end

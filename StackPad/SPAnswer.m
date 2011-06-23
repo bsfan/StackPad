@@ -42,11 +42,7 @@ NSString* const SPAnswerBody = @"body";
 @synthesize title;
 @synthesize body;
 
--(NSString*) getDetailedText {
-    return [self body];
-}
-
-+(SPAnswer *)initWithDictionary:(NSDictionary *)dictionary {
++(id)initWithDictionary:(NSDictionary *)dictionary {
     SPAnswer* answer = [[[SPAnswer alloc] init] autorelease];
     answer.answerId = (NSInteger*) [[dictionary objectForKey:SPAnswerId] intValue];
     answer.accepted = [[dictionary objectForKey:SPAnswerAccepted] boolValue];
@@ -61,14 +57,16 @@ NSString* const SPAnswerBody = @"body";
     answer.viewCount = (NSInteger*) [[dictionary objectForKey:SPAnswerViewCount] intValue];
     answer.score = (NSInteger*) [[dictionary objectForKey:SPAnswerScore] intValue];
     answer.communityOwned = [[dictionary objectForKey:SPAnswerCommunityOwned] boolValue];
-    answer.title = [[dictionary objectForKey:SPAnswerTitle] stringValue];
-    answer.body = [[dictionary objectForKey:SPAnswerBody] stringValue];
+    answer.title = [dictionary objectForKey:SPAnswerTitle];
+    answer.body = [dictionary objectForKey:SPAnswerBody];
     return answer;
 }
 
 -(SPTableViewCell*) getUITableCellInTable:(UITableView*)table {
     NSString* subtitle = [NSString stringWithFormat:@"%d points", [self score]];
-    return [self getUITableCellInTable:table withTitle:[self title] andSubTitle:subtitle];
+    return [self getUITableCellInTable:table 
+                             withTitle:[self title] 
+                           andSubTitle:subtitle];
 }
 
 @end

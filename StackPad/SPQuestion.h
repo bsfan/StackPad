@@ -50,9 +50,6 @@ extern NSString* const SPQuestionCommunityOwned;
     BOOL communityOwned;
 }
 
-// Create a SPQuestion object from a dictionary
-+(SPQuestion*) initWithDictionary:(NSDictionary*)dictionary;
-
 @property (nonatomic) NSInteger* questionId;
 @property (nonatomic, retain) NSMutableArray* tags;
 @property (nonatomic) NSInteger* answerCount;

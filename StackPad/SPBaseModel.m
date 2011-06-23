@@ -10,8 +10,9 @@
 
 @implementation SPBaseModel
 
--(NSString*) getDetailedText {
-    return @"Details";
++(id) initWithDictionary:(NSDictionary *)dictionary {
+    // Do not implement, should be implemented by subclasses
+    return nil;
 }
 
 -(SPTableViewCell*) getUITableCellInTable:(UITableView*)table {

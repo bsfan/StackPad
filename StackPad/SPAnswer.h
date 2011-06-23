@@ -45,9 +45,6 @@ extern NSString* const SPAnswerBody;
     NSString* body;
 }
 
-// Create a SPQuestion object from a dictionary
-+(SPAnswer*) initWithDictionary:(NSDictionary*)dictionary;
-
 @property (nonatomic) NSInteger* answerId;
 @property (nonatomic) BOOL accepted;
 @property (nonatomic, retain) NSURL* commentsUrl;

@@ -35,12 +35,25 @@ extern NSString* const StackExchangeApiTags;
     
 }
 
+// Get the JSON text given an endpoint URL
 +(NSString*) stringFromUrl:(NSURL*)url;
+
+// Create a generic object from a url
 +(id) objectFromUrl:(NSURL*)url;
+
+// Return the JSON from an endpoint as key-value pairs
 +(NSDictionary*) getJsonFromEndpoint:(NSString*)endpoint;
 
+// Query for users
 +(NSMutableArray*) getAllUsers;
+
+// Query for questions
 +(NSMutableArray*) getAllQuestions;
+
+// Query for answers
 +(NSMutableArray*) getAllAnswers;
+
+// Query for comments
++(NSMutableArray*) getAllComments;
 
 @end

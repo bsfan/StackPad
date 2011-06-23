@@ -46,7 +46,7 @@ NSString* const SPQuestionCommunityOwned = @"community_owned";
 @synthesize body;
 @synthesize communityOwned;
 
-+(SPQuestion *)initWithDictionary:(NSDictionary *)dictionary {
++(id)initWithDictionary:(NSDictionary *)dictionary {
     SPQuestion* question = [[[SPQuestion alloc] init] autorelease];
     question.questionId = (NSInteger*) [dictionary objectForKey:SPQuestionId];
     question.answerCount = (NSInteger*) [dictionary objectForKey:SPQuestionAnswerCount];
@@ -67,13 +67,11 @@ NSString* const SPQuestionCommunityOwned = @"community_owned";
     return question;
 }
 
--(NSString*) getDetailedText {
-    return [self body];
-}
-
 -(SPTableViewCell*) getUITableCellInTable:(UITableView*)table {
     NSString* subtitle = [NSString stringWithFormat:@"%d points", [self score]];
-    return [self getUITableCellInTable:table withTitle:[self title] andSubTitle:subtitle];
+    return [self getUITableCellInTable:table
+                             withTitle:[self title]
+                           andSubTitle:subtitle];
 }
 
 @end

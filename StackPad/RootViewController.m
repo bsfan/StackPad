@@ -107,6 +107,9 @@
     else if ([indexPath row] == 2) {
         [contentViewController setDetailItem:[StackExchangeAPI getAllAnswers] type:SPTypeAnswer];
     }
+    else if ([indexPath row] == 3) {
+        [contentViewController setDetailItem:[StackExchangeAPI getAllComments] type:SPTypeComment];
+    }
 }
 
 - (void)didReceiveMemoryWarning

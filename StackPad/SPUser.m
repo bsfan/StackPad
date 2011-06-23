@@ -28,12 +28,12 @@ NSString* const SPUserAnswerCount = @"answer_count";
 @synthesize displayName;
 @synthesize questionCount;
 
-+(SPUser*) initWithDictionary:(NSDictionary *)dict {
++(id) initWithDictionary:(NSDictionary *)dict {
     SPUser *user = [[[SPUser alloc] init] autorelease];
-    user.aboutMe = (NSString*) [dict objectForKey:SPUserAboutMe];
-    user.location = (NSString*) [dict objectForKey:SPUserLocation];
-    user.websiteUrl = (NSString*) [dict objectForKey:SPUserWebsiteUrl];
-    user.displayName = (NSString*) [dict objectForKey:SPUserDisplayName];
+    user.aboutMe = [dict objectForKey:SPUserAboutMe];
+    user.location = [dict objectForKey:SPUserLocation];
+    user.websiteUrl = [NSURL URLWithString:[dict objectForKey:SPUserWebsiteUrl]];
+    user.displayName = [dict objectForKey:SPUserDisplayName];
     user.userId = (NSInteger*) [[dict objectForKey:SPUserId] intValue];
     user.reputation = (NSInteger*) [[dict objectForKey:SPUserReputation] intValue];
     user.answerCount = (NSInteger*) [[dict objectForKey:SPUserAnswerCount] intValue];

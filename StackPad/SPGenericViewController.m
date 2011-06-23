@@ -92,7 +92,7 @@
     NSMutableArray* items = (NSMutableArray*) detailItem;
     SPBaseModel* item = [items objectAtIndex:[indexPath row]];
     SPBaseModelViewController* controller = [[SPBaseModelViewController alloc] initWithNibName:@"QuestionView" bundle:nil];
-    controller.detail = item;
+    [controller setDetail:item];
     [self.view addSubview:controller.view];
 }
 
@@ -121,7 +121,7 @@
     [[self baseTableView] setDataSource:self];
     
     // Give each row a
-    baseTableView.rowHeight = baseTableView.rowHeight+20;
+    baseTableView.rowHeight = baseTableView.rowHeight+10; //20
 }
 
 

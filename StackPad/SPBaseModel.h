@@ -14,7 +14,8 @@
     
 }
 
--(NSString*) getDetailedText;
+// Initialize this object with a dictionary
++(id)initWithDictionary:(NSDictionary *)dictionary;
 
 // Get a UITableViewCell for a table 
 -(SPTableViewCell*) getUITableCellInTable:(UITableView*)table;
