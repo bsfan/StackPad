@@ -89,11 +89,21 @@
 }
 
 - (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Get the list of items
     NSMutableArray* items = (NSMutableArray*) detailItem;
+    
+    // Grab the particular item which was selected
     SPBaseModel* item = [items objectAtIndex:[indexPath row]];
+    
+    // Create a controller for that item
     SPBaseModelViewController* controller = [[SPBaseModelViewController alloc] initWithNibName:@"QuestionView" bundle:nil];
     [controller setDetail:item];
-    [self.view addSubview:controller.view];
+    
+    // Create a navigation controller for the view and push it
+    UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    UIColor* color = self.navigationController.navigationBar.tintColor;
+    [navController.navigationBar setTintColor:color];
+    [self presentModalViewController:navController animated:YES];
 }
 
 - (void)dealloc

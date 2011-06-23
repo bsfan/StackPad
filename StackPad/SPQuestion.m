@@ -48,18 +48,18 @@ NSString* const SPQuestionCommunityOwned = @"community_owned";
 
 +(id)initWithDictionary:(NSDictionary *)dictionary {
     SPQuestion* question = [[[SPQuestion alloc] init] autorelease];
-    question.questionId = (NSInteger*) [dictionary objectForKey:SPQuestionId];
-    question.answerCount = (NSInteger*) [dictionary objectForKey:SPQuestionAnswerCount];
-    question.favoriteCount = (NSInteger*) [dictionary objectForKey:SPQuestionFavoriteCount];
+    question.questionId = (NSInteger*) [[dictionary objectForKey:SPQuestionId] intValue];
+    question.answerCount = (NSInteger*) [[dictionary objectForKey:SPQuestionAnswerCount] intValue];
+    question.favoriteCount = (NSInteger*) [[dictionary objectForKey:SPQuestionFavoriteCount] intValue];
     question.timelineUrl = [NSURL URLWithString:[dictionary objectForKey:SPQuestionTimelineUrl]];
     question.commentsUrl = [NSURL URLWithString:[dictionary objectForKey:SPQuestionCommentsUrl]];
     question.answersUrl = [NSURL URLWithString:[dictionary objectForKey:SPQuestionAnswersUrl]];
     question.owner = [SPUser initWithDictionary:[dictionary objectForKey:SPQuestionOwner]];
     question.creationDate = [NSDate dateWithTimeIntervalSince1970:[[dictionary objectForKey:SPQuestionCreationDate] doubleValue]];
     question.lastActivityDate = [NSDate dateWithTimeIntervalSince1970:[[dictionary objectForKey:SPQuestionLastActivityDate] doubleValue]];
-    question.upvoteCount = (NSInteger*) [dictionary objectForKey:SPQuestionUpvoteCount];
-    question.downvoteCount = (NSInteger*) [dictionary objectForKey:SPQuestionDownvoteCount];
-    question.viewCount = (NSInteger*) [dictionary objectForKey:SPQuestionViewCount];
+    question.upvoteCount = (NSInteger*) [[dictionary objectForKey:SPQuestionUpvoteCount] intValue];
+    question.downvoteCount = (NSInteger*) [[dictionary objectForKey:SPQuestionDownvoteCount] intValue];
+    question.viewCount = (NSInteger*) [[dictionary objectForKey:SPQuestionViewCount] intValue];
     question.score = (NSInteger*) [[dictionary objectForKey:SPQuestionScore] intValue];
     question.title = (NSString*) [dictionary objectForKey:SPQuestionTitle];
     question.body = (NSString*) [dictionary objectForKey:SPQuestionBody];

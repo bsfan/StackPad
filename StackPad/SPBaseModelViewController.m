@@ -14,6 +14,8 @@
 @synthesize titleLabel;
 @synthesize questionView;
 @synthesize closeButton;
+@synthesize scoreLabel;
+@synthesize answersLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +29,7 @@
 }
 
 - (IBAction) closeDetails:(id)sender {
-    [[self view] removeFromSuperview];
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 - (void)dealloc
@@ -51,8 +53,15 @@
     [super viewDidLoad];
     
     SPQuestion* question = (SPQuestion*) detail;
-    [titleLabel setText:[question title]];
+    [titleLabel setText:question.title];
+    [scoreLabel setText:[NSString stringWithFormat:@"%d",question.score]];
+    [answersLabel setText:[NSString stringWithFormat:@"%d Answers", question.answerCount]];
     [questionView loadHTMLString:[question body] baseURL:[NSURL URLWithString:@"about:none"]];
+    [questionView setBackgroundColor:[UIColor grayColor]];
+    
+    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                                            target:self 
+                                                                                            action:@selector(closeDetails:)] autorelease];
 }
 
 - (void)viewDidUnload
