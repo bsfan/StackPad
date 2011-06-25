@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "StackExchangeAPI.h"
-#import "SPBaseModelViewController.h"
+#import "QuestionViewController.h"
 
 @interface SPGenericViewController : UIViewController<UITableViewDelegate,UITableViewDataSource> {
     IBOutlet UIView* dataView;

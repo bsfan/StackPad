@@ -95,8 +95,14 @@
     // Grab the particular item which was selected
     SPBaseModel* item = [items objectAtIndex:[indexPath row]];
     
+    SPBaseModelViewController* controller;
+    
     // Create a controller for that item
-    SPBaseModelViewController* controller = [[SPBaseModelViewController alloc] initWithNibName:@"QuestionView" bundle:nil];
+    if (type == SPTypeQuestion)
+        controller = [[QuestionViewController alloc] init];
+    else if (type == SPTypeAnswer)
+        controller = [[QuestionViewController alloc] init];
+                       
     [controller setDetail:item];
     
     // Create a navigation controller for the view and push it

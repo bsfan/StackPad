@@ -11,11 +11,6 @@
 @implementation SPBaseModelViewController
 
 @synthesize detail;
-@synthesize titleLabel;
-@synthesize questionView;
-@synthesize closeButton;
-@synthesize scoreLabel;
-@synthesize answersLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,23 +41,6 @@
 }
 
 #pragma mark - View lifecycle
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    SPQuestion* question = (SPQuestion*) detail;
-    [titleLabel setText:question.title];
-    [scoreLabel setText:[NSString stringWithFormat:@"%d",question.score]];
-    [answersLabel setText:[NSString stringWithFormat:@"%d Answers", question.answerCount]];
-    [questionView loadHTMLString:[question body] baseURL:[NSURL URLWithString:@"about:none"]];
-    [questionView setBackgroundColor:[UIColor grayColor]];
-    
-    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                                                                                            target:self 
-                                                                                            action:@selector(closeDetails:)] autorelease];
-}
 
 - (void)viewDidUnload
 {
