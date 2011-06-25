@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SPBaseModel.h"
 
-@interface SPBaseModelViewController : UIViewController {
+@interface SPBaseModelViewController : UIViewController<UIWebViewDelegate> {
     SPBaseModel* detail;
 }
 

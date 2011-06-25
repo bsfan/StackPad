@@ -105,7 +105,7 @@
         [contentViewController setDetailItem:[StackExchangeAPI getAllQuestions] type:SPTypeQuestion];
     }
     else if ([indexPath row] == 2) {
-        [contentViewController setDetailItem:[StackExchangeAPI getAllAnswers] type:SPTypeAnswer];
+        [contentViewController setDetailItem:[StackExchangeAPI getAnswers:nil] type:SPTypeAnswer];
     }
     else if ([indexPath row] == 3) {
         [contentViewController setDetailItem:[StackExchangeAPI getAllComments] type:SPTypeComment];

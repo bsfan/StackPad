@@ -65,7 +65,7 @@ NSString* const SPAnswerBody = @"body";
 -(SPTableViewCell*) getUITableCellInTable:(UITableView*)table {
     NSString* subtitle = [NSString stringWithFormat:@"%d points", [self score]];
     return [self getUITableCellInTable:table 
-                             withTitle:[self title] 
+                             withTitle:[self body] 
                            andSubTitle:subtitle];
 }
 

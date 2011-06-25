@@ -44,6 +44,9 @@ extern NSString* const StackExchangeApiTags;
 // Return the JSON from an endpoint as key-value pairs
 +(NSDictionary*) getJsonFromEndpoint:(NSString*)endpoint;
 
+// Return the JSON from an endpoint, with options, as key-value pairs
++(NSDictionary*) getJsonFromEndpoint:(NSString *)endpoint withOptions:(NSString*)options;
+
 // Query for users
 +(NSMutableArray*) getAllUsers;
 
@@ -51,7 +54,10 @@ extern NSString* const StackExchangeApiTags;
 +(NSMutableArray*) getAllQuestions;
 
 // Query for answers
-+(NSMutableArray*) getAllAnswers;
++(NSMutableArray*) getAnswers:(NSString*)options;
+
+// Get the answers for a particular question
++(NSMutableArray*) getAnswersForQuestion:(NSInteger*)id withOptions:(NSString*)options;
 
 // Query for comments
 +(NSMutableArray*) getAllComments;

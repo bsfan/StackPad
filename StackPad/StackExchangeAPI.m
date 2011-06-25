@@ -42,8 +42,17 @@ NSString* const StackExchangeApiTags = @"tags";
 }
 
 + (NSDictionary*) getJsonFromEndpoint:(NSString*)endpoint {
-    NSString* urlString = [NSString stringWithFormat:@"%@%@?key=%@&body=true",StackExchangeApiUrl,endpoint,StackExchangeApiKey];
-    NSLog(@"%@",urlString);
+    return [self getJsonFromEndpoint:endpoint withOptions:nil];
+}
+
++ (NSDictionary*) getJsonFromEndpoint:(NSString*)endpoint withOptions:(NSString*)options {
+    NSString* urlString;
+    
+    if (options)
+        urlString = [NSString stringWithFormat:@"%@%@?key=%@&body=true&%@",StackExchangeApiUrl,endpoint,StackExchangeApiKey,options];
+    else
+        urlString = [NSString stringWithFormat:@"%@%@?key=%@&body=true",StackExchangeApiUrl,endpoint,StackExchangeApiKey];
+    NSLog(@"apicall: %@",urlString);
     NSURL* url = [NSURL URLWithString:urlString];
     id response = [StackExchangeAPI objectFromUrl:url];
     NSDictionary *dictionary = (NSDictionary *) response;
@@ -88,8 +97,28 @@ NSString* const StackExchangeApiTags = @"tags";
     return objects;
 }
 
-+(NSMutableArray*) getAllAnswers {
-    NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiAnswers];
++(NSMutableArray*) getAnswers:(NSString*)options {
+    NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiAnswers withOptions:options];
+    
+    // Get an array of users
+    NSArray *objectArray = (NSArray*)[objectDictionary valueForKey:StackExchangeApiAnswers];
+    
+    // Loop over these objects and assign them to the mutable array as users
+    int index;
+    NSDictionary *singleObjectDict;
+    NSMutableArray* objects = [[NSMutableArray alloc] initWithCapacity:objectArray.count];
+    
+    for (index = 0; index < objectArray.count; index++) {
+        singleObjectDict = (NSDictionary*) [objectArray objectAtIndex:index];
+        [objects insertObject:[SPAnswer initWithDictionary:singleObjectDict] atIndex:index];
+    }
+    
+    return objects;
+}
+
++(NSMutableArray*) getAnswersForQuestion:(NSInteger*)id withOptions:(NSString*)options {
+    NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:[NSString stringWithFormat:@"%@/%d/%@",StackExchangeApiQuestions,id,StackExchangeApiAnswers] 
+                                                               withOptions:options];
     
     // Get an array of users
     NSArray *objectArray = (NSArray*)[objectDictionary valueForKey:StackExchangeApiAnswers];
