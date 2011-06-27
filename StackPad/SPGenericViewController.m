@@ -16,12 +16,9 @@
 @implementation SPGenericViewController
 
 @synthesize dataView;
-@synthesize titleLabel;
-@synthesize subtitleLabel;
 @synthesize baseTableView;
-@synthesize toolbar;
+@synthesize navBar;
 @synthesize detailItem;
-@synthesize headerView;
 @synthesize popoverController;
 @synthesize type;
 
@@ -46,28 +43,22 @@
     // Switch the text of the header based on which option was selected
     switch (self.type) {
         case 0:
-            titleLabel.text = @"Top Users";
-            subtitleLabel.text = @"Lists the top Stack Exchange users";
+            navBar.topItem.title = @"Top Users";
             break;
         case 1:
-            titleLabel.text = @"Recent Questions";
-            subtitleLabel.text = @"Lists the most recent Stack Exchange questions";
+            navBar.topItem.title = @"Recent Questions";
             break;
         case 2:
-            titleLabel.text = @"Recent Answers";
-            subtitleLabel.text = @"Lists the most recent Stack Exchange answers";
+            navBar.topItem.title = @"Recent Answers";
             break;
         case 3:
-            titleLabel.text = @"Top Comments";
-            subtitleLabel.text = @"Lists the most recent Stack Exchange comments";
+            navBar.topItem.title = @"Top Comments";
             break;
         case 4:
-            titleLabel.text = @"Badges";
-            subtitleLabel.text = @"Lists badges that a user can attain";
+            navBar.topItem.title = @"Badges";
             break;
         case 5:
-            titleLabel.text = @"Tags";
-            subtitleLabel.text = @"Lists all tags which can be assigned to questions";
+            navBar.topItem.title = @"Tags";
             break;
         default:
             break;
@@ -99,9 +90,9 @@
     
     // Create a controller for that item
     if (type == SPTypeQuestion)
-        controller = [[QuestionViewController alloc] init];
+        controller = [[SPQuestionViewController alloc] init];
     else if (type == SPTypeAnswer)
-        controller = [[QuestionViewController alloc] init];
+        controller = [[SPQuestionViewController alloc] init];
                        
     [controller setDetail:item];
     

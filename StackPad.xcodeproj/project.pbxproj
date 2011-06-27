@@ -44,7 +44,8 @@
 		73B52E8313B160B400BA3220 /* SPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B52E8213B160B400BA3220 /* SPTableViewCell.m */; };
 		73B52E8613B2344100BA3220 /* SPBaseModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B52E8513B2344100BA3220 /* SPBaseModelViewController.m */; };
 		73B52E8813B2431E00BA3220 /* QuestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73B52E8713B2431E00BA3220 /* QuestionView.xib */; };
-		73B52E8B13B61AD400BA3220 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B52E8A13B61AD300BA3220 /* QuestionViewController.m */; };
+		73B52E8B13B61AD400BA3220 /* SPQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B52E8A13B61AD300BA3220 /* SPQuestionViewController.m */; };
+		73B52F2213B8F9FE00BA3220 /* SPUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B52F2113B8F9FA00BA3220 /* SPUserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,8 +110,10 @@
 		73B52E8413B2344100BA3220 /* SPBaseModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBaseModelViewController.h; sourceTree = "<group>"; };
 		73B52E8513B2344100BA3220 /* SPBaseModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBaseModelViewController.m; sourceTree = "<group>"; };
 		73B52E8713B2431E00BA3220 /* QuestionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionView.xib; sourceTree = "<group>"; };
-		73B52E8913B61AD300BA3220 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
-		73B52E8A13B61AD300BA3220 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		73B52E8913B61AD300BA3220 /* SPQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPQuestionViewController.h; sourceTree = "<group>"; };
+		73B52E8A13B61AD300BA3220 /* SPQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPQuestionViewController.m; sourceTree = "<group>"; };
+		73B52F2013B8F9F800BA3220 /* SPUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPUserViewController.h; sourceTree = "<group>"; };
+		73B52F2113B8F9FA00BA3220 /* SPUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPUserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,8 +237,10 @@
 				7344B8A713ABF9BD00F4B9CB /* SPGenericViewController.m */,
 				73B52E8413B2344100BA3220 /* SPBaseModelViewController.h */,
 				73B52E8513B2344100BA3220 /* SPBaseModelViewController.m */,
-				73B52E8913B61AD300BA3220 /* QuestionViewController.h */,
-				73B52E8A13B61AD300BA3220 /* QuestionViewController.m */,
+				73B52E8913B61AD300BA3220 /* SPQuestionViewController.h */,
+				73B52E8A13B61AD300BA3220 /* SPQuestionViewController.m */,
+				73B52F2013B8F9F800BA3220 /* SPUserViewController.h */,
+				73B52F2113B8F9FA00BA3220 /* SPUserViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -394,7 +399,8 @@
 				73B52E7E13B112E400BA3220 /* SPBaseModel.m in Sources */,
 				73B52E8313B160B400BA3220 /* SPTableViewCell.m in Sources */,
 				73B52E8613B2344100BA3220 /* SPBaseModelViewController.m in Sources */,
-				73B52E8B13B61AD400BA3220 /* QuestionViewController.m in Sources */,
+				73B52E8B13B61AD400BA3220 /* SPQuestionViewController.m in Sources */,
+				73B52F2213B8F9FE00BA3220 /* SPUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
