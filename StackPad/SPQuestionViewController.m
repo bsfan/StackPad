@@ -87,13 +87,4 @@
 	return YES;
 }
 
-- (void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    int width = self.view.frame.size.width;
-    
-    // Set each view to grow or shrink as necessary
-    [self.titleLabel setFrame:CGRectMake(self.titleLabel.frame.origin.x, self.titleLabel.frame.origin.y, width, self.titleLabel.frame.size.height)];
-    [self.questionView setFrame:CGRectMake(self.questionView.frame.origin.x, self.questionView.frame.origin.y, width, self.questionView.frame.size.height)];
-    [self.answersTable setFrame:CGRectMake(self.answersTable.frame.origin.x, self.answersTable.frame.origin.y, width, self.answersTable.frame.size.height)];
-}
-
 @end

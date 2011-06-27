@@ -15,7 +15,7 @@
     IBOutlet UITableView* baseTableView;
 }
 
--(void) setDetailItem:(id)newDetailItem type:(int)type;
+-(void) setDetailItem:(id)newDetailItem fromRow:(int)row withType:(int)type;
 
 @property (nonatomic, retain) IBOutlet UIView* dataView;
 @property (nonatomic, retain) IBOutlet UITableView* baseTableView;

@@ -10,7 +10,7 @@
 
 @interface SPGenericViewController ()
 @property (nonatomic, retain) UIPopoverController *popoverController;
-- (void)configureView;
+- (void)configureView:(int)row;
 @end
 
 @implementation SPGenericViewController
@@ -22,14 +22,14 @@
 @synthesize popoverController;
 @synthesize type;
 
-- (void)setDetailItem:(id)newDetailItem type:(int)newType {
+- (void)setDetailItem:(id)newDetailItem fromRow:(int)row withType:(int)newType {
     if (detailItem != newDetailItem) {
         [detailItem release];
         detailItem = [newDetailItem retain];
         self.type = newType;
         
         // Update the view.
-        [self configureView];
+        [self configureView:row];
     }
     
     if (self.popoverController != nil) {
@@ -37,27 +37,36 @@
     }    
 }
 
-- (void) configureView {
+- (void) configureView:(int)row {
     [[self baseTableView] reloadData];
     
     // Switch the text of the header based on which option was selected
-    switch (self.type) {
+    switch (row) {
         case 0:
             navBar.topItem.title = @"Top Users";
             break;
         case 1:
-            navBar.topItem.title = @"Recent Questions";
+            navBar.topItem.title = @"Top Questions";
             break;
         case 2:
-            navBar.topItem.title = @"Recent Answers";
+            navBar.topItem.title = @"Top Answers";
             break;
         case 3:
             navBar.topItem.title = @"Top Comments";
             break;
         case 4:
-            navBar.topItem.title = @"Badges";
+            navBar.topItem.title = @"Newest Questions";
             break;
         case 5:
+            navBar.topItem.title = @"Newest Answers";
+            break;
+        case 6:
+            navBar.topItem.title = @"Newest Comments";
+            break;
+        case 7:
+            navBar.topItem.title = @"Badges";
+            break;
+        case 8:
             navBar.topItem.title = @"Tags";
             break;
         default:

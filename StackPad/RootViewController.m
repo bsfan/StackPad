@@ -98,17 +98,28 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([indexPath row] == 0) {
-        [contentViewController setDetailItem:[StackExchangeAPI getAllUsers] type:SPTypeUser];
+    int row = [indexPath row];
+    
+    if (row == 0) {
+        [contentViewController setDetailItem:[StackExchangeAPI getUsers:nil] fromRow:row withType:SPTypeUser];
     }
-    else if ([indexPath row] == 1) {
-        [contentViewController setDetailItem:[StackExchangeAPI getAllQuestions] type:SPTypeQuestion];
+    else if (row == 1) {
+        [contentViewController setDetailItem:[StackExchangeAPI getTopQuestions:nil] fromRow:row withType:SPTypeQuestion];
     }
-    else if ([indexPath row] == 2) {
-        [contentViewController setDetailItem:[StackExchangeAPI getAnswers:nil] type:SPTypeAnswer];
+    else if (row == 2) {
+        [contentViewController setDetailItem:[StackExchangeAPI getAnswers:nil] fromRow:row withType:SPTypeAnswer];
     }
-    else if ([indexPath row] == 3) {
-        [contentViewController setDetailItem:[StackExchangeAPI getAllComments] type:SPTypeComment];
+    else if (row == 3) {
+        [contentViewController setDetailItem:[StackExchangeAPI getComments:nil] fromRow:row withType:SPTypeComment];
+    }
+    else if (row == 4) {
+        [contentViewController setDetailItem:[StackExchangeAPI getQuestions:nil] fromRow:row withType:SPTypeQuestion];
+    }
+    else if (row == 5) {
+        [contentViewController setDetailItem:[StackExchangeAPI getAnswers:nil] fromRow:row withType:SPTypeAnswer];
+    }
+    else if (row == 6) {
+        [contentViewController setDetailItem:[StackExchangeAPI getComments] fromRow:row withType:SPTypeComment];
     }
 }
 

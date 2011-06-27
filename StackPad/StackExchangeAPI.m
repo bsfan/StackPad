@@ -59,8 +59,8 @@ NSString* const StackExchangeApiTags = @"tags";
     return dictionary;
 }
 
-+(NSMutableArray*) getAllUsers {
-    NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiUsers];
++(NSMutableArray*) getUsers:(NSString*)options {
+    NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiUsers withOptions:options];
     
     // Get an array of users
     NSArray *objectArray = (NSArray*)[objectDictionary valueForKey:StackExchangeApiUsers];
@@ -78,8 +78,27 @@ NSString* const StackExchangeApiTags = @"tags";
     return objects;
 }
 
-+(NSMutableArray*) getAllQuestions {
-    NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiQuestions];
++(NSMutableArray*) getQuestions:(NSString*)options {
+    NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiQuestions withOptions:options];
+    
+    // Get an array of users
+    NSArray *objectArray = (NSArray*)[objectDictionary valueForKey:StackExchangeApiQuestions];
+    
+    // Loop over these objects and assign them to the mutable array as users
+    int index;
+    NSDictionary *singleObjectDict;
+    NSMutableArray* objects = [[NSMutableArray alloc] initWithCapacity:objectArray.count];
+    
+    for (index = 0; index < objectArray.count; index++) {
+        singleObjectDict = (NSDictionary*) [objectArray objectAtIndex:index];
+        [objects insertObject:[SPQuestion initWithDictionary:singleObjectDict] atIndex:index];
+    }
+    
+    return objects;
+}
+
++(NSMutableArray*) getTopQuestions:(NSString*)options {
+    NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiQuestions withOptions:[NSString stringWithFormat:@"sort=votes&%@",options]];
     
     // Get an array of users
     NSArray *objectArray = (NSArray*)[objectDictionary valueForKey:StackExchangeApiQuestions];
@@ -136,8 +155,8 @@ NSString* const StackExchangeApiTags = @"tags";
     return objects;
 }
 
-+(NSMutableArray*) getAllComments {
-    NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiComments];
++(NSMutableArray*) getComments:(NSString*)options {
+    NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiComments withOptions:options];
     
     // Get an array of users
     NSArray *objectArray = (NSArray*)[objectDictionary valueForKey:StackExchangeApiComments];

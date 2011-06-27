@@ -48,10 +48,13 @@ extern NSString* const StackExchangeApiTags;
 +(NSDictionary*) getJsonFromEndpoint:(NSString *)endpoint withOptions:(NSString*)options;
 
 // Query for users
-+(NSMutableArray*) getAllUsers;
++(NSMutableArray*) getUsers:(NSString*)options;
 
 // Query for questions
-+(NSMutableArray*) getAllQuestions;
++(NSMutableArray*) getQuestions:(NSString*)options;
+
+// Get the top questions
++(NSMutableArray*) getTopQuestions:(NSString*)options;
 
 // Query for answers
 +(NSMutableArray*) getAnswers:(NSString*)options;
@@ -60,6 +63,6 @@ extern NSString* const StackExchangeApiTags;
 +(NSMutableArray*) getAnswersForQuestion:(NSInteger*)id withOptions:(NSString*)options;
 
 // Query for comments
-+(NSMutableArray*) getAllComments;
++(NSMutableArray*) getComments:(NSString*)options;
 
 @end
