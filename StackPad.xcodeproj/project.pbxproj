@@ -157,15 +157,15 @@
 		73C2A1DF13BA2A6100CAD359 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				73C2A20F13BA2A6100CAD359 /* Views */,
 				73C2A1E013BA2A6100CAD359 /* Controllers */,
 				73C2A1EB13BA2A6100CAD359 /* JSON */,
-				73C2A1F713BA2A6100CAD359 /* main.m */,
 				73C2A1F813BA2A6100CAD359 /* Models */,
 				73C2A20B13BA2A6100CAD359 /* StackExchangeAPI.h */,
 				73C2A20C13BA2A6100CAD359 /* StackExchangeAPI.m */,
 				73C2A20D13BA2A6100CAD359 /* StackPadAppDelegate.h */,
 				73C2A20E13BA2A6100CAD359 /* StackPadAppDelegate.m */,
-				73C2A20F13BA2A6100CAD359 /* Views */,
+				73C2A1F713BA2A6100CAD359 /* main.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
