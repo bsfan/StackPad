@@ -69,10 +69,10 @@ NSString* const SPAnswerBody = @"body";
                            andSubTitle:subtitle];
 }*/
 
--(SPTableViewCell*) getUITableCellInTable:(UITableView *)table {
+-(BasicTableViewCell*) getUITableCellInTable:(UITableView *)table {
     // Create a new cell for displaying simple data
     static NSString *CellIdentifier = @"CellIdentifier";
-    SPTableViewCell *cell = [[[SPTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle            
+    BasicTableViewCell *cell = [[[BasicTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle            
                                                     reuseIdentifier:CellIdentifier] autorelease];
     cell.accessoryType = UITableViewCellAccessoryNone;
     

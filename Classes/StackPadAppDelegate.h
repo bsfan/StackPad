@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SPGenericViewController.h"
+#import "ModelTableViewController.h"
 
 @class RootViewController;
 
@@ -20,6 +20,6 @@
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UISplitViewController *splitViewController;
 @property (nonatomic, retain) IBOutlet RootViewController *rootViewController;
-@property (nonatomic, retain) IBOutlet SPGenericViewController *detailViewController;
+@property (nonatomic, retain) IBOutlet ModelTableViewController *detailViewController;
 
 @end

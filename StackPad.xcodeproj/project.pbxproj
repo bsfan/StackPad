@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		730241A813BA4080002A67B3 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 730241A613BA4080002A67B3 /* DetailView.xib */; };
+		730241A913BA4080002A67B3 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 730241A713BA4080002A67B3 /* MainWindow.xib */; };
 		7352AB3013AA4C8600B65CBF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7352AB2F13AA4C8600B65CBF /* UIKit.framework */; };
 		7352AB3213AA4C8600B65CBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7352AB3113AA4C8600B65CBF /* Foundation.framework */; };
 		7352AB3413AA4C8600B65CBF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7352AB3313AA4C8600B65CBF /* CoreGraphics.framework */; };
+		7382102813BA521300B02CE2 /* bronze.png in Resources */ = {isa = PBXBuildFile; fileRef = 7382102513BA521300B02CE2 /* bronze.png */; };
+		7382102913BA521300B02CE2 /* gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 7382102613BA521300B02CE2 /* gold.png */; };
+		7382102A13BA521300B02CE2 /* silver.png in Resources */ = {isa = PBXBuildFile; fileRef = 7382102713BA521300B02CE2 /* silver.png */; };
 		73B52E8013B13B3F00BA3220 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B52E7F13B13B3F00BA3220 /* QuartzCore.framework */; };
 		73C2A22013BA2A6100CAD359 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2A1E213BA2A6100CAD359 /* RootViewController.m */; };
-		73C2A22113BA2A6100CAD359 /* SPBaseModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2A1E413BA2A6100CAD359 /* SPBaseModelViewController.m */; };
-		73C2A22213BA2A6100CAD359 /* SPGenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2A1E613BA2A6100CAD359 /* SPGenericViewController.m */; };
-		73C2A22313BA2A6100CAD359 /* SPQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2A1E813BA2A6100CAD359 /* SPQuestionViewController.m */; };
-		73C2A22413BA2A6100CAD359 /* SPUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2A1EA13BA2A6100CAD359 /* SPUserViewController.m */; };
+		73C2A22113BA2A6100CAD359 /* BaseModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2A1E413BA2A6100CAD359 /* BaseModelViewController.m */; };
+		73C2A22213BA2A6100CAD359 /* ModelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2A1E613BA2A6100CAD359 /* ModelTableViewController.m */; };
+		73C2A22313BA2A6100CAD359 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2A1E813BA2A6100CAD359 /* QuestionViewController.m */; };
+		73C2A22413BA2A6100CAD359 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2A1EA13BA2A6100CAD359 /* UserViewController.m */; };
 		73C2A22513BA2A6100CAD359 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2A1EE13BA2A6100CAD359 /* NSObject+SBJSON.m */; };
 		73C2A22613BA2A6100CAD359 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2A1F013BA2A6100CAD359 /* NSString+SBJSON.m */; };
 		73C2A22713BA2A6100CAD359 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2A1F213BA2A6100CAD359 /* SBJsonBase.m */; };
@@ -33,7 +38,7 @@
 		73C2A23313BA2A6100CAD359 /* SPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2A20A13BA2A6100CAD359 /* SPUser.m */; };
 		73C2A23413BA2A6100CAD359 /* StackExchangeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2A20C13BA2A6100CAD359 /* StackExchangeAPI.m */; };
 		73C2A23513BA2A6100CAD359 /* StackPadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2A20E13BA2A6100CAD359 /* StackPadAppDelegate.m */; };
-		73C2A23613BA2A6100CAD359 /* SPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2A21113BA2A6100CAD359 /* SPTableViewCell.m */; };
+		73C2A23613BA2A6100CAD359 /* BasicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2A21113BA2A6100CAD359 /* BasicTableViewCell.m */; };
 		73C2A23713BA2A6100CAD359 /* Categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73C2A21413BA2A6100CAD359 /* Categories.plist */; };
 		73C2A23813BA2A6100CAD359 /* StackPad-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73C2A21513BA2A6100CAD359 /* StackPad-Info.plist */; };
 		73C2A23913BA2A6100CAD359 /* answers.png in Resources */ = {isa = PBXBuildFile; fileRef = 73C2A21713BA2A6100CAD359 /* answers.png */; };
@@ -44,24 +49,30 @@
 		73C2A23E13BA2A6100CAD359 /* tags.png in Resources */ = {isa = PBXBuildFile; fileRef = 73C2A21C13BA2A6100CAD359 /* tags.png */; };
 		73C2A23F13BA2A6100CAD359 /* users.png in Resources */ = {isa = PBXBuildFile; fileRef = 73C2A21D13BA2A6100CAD359 /* users.png */; };
 		73C2A24013BA2A6100CAD359 /* QuestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C2A21F13BA2A6100CAD359 /* QuestionView.xib */; };
+		73C2A24313BA372200CAD359 /* BadgeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2A24213BA372200CAD359 /* BadgeTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		730241A613BA4080002A67B3 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		730241A713BA4080002A67B3 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		7352AB2B13AA4C8600B65CBF /* StackPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7352AB2F13AA4C8600B65CBF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7352AB3113AA4C8600B65CBF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7352AB3313AA4C8600B65CBF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7382102513BA521300B02CE2 /* bronze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bronze.png; sourceTree = "<group>"; };
+		7382102613BA521300B02CE2 /* gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gold.png; sourceTree = "<group>"; };
+		7382102713BA521300B02CE2 /* silver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = silver.png; sourceTree = "<group>"; };
 		73B52E7F13B13B3F00BA3220 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		73C2A1E113BA2A6100CAD359 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		73C2A1E213BA2A6100CAD359 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		73C2A1E313BA2A6100CAD359 /* SPBaseModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBaseModelViewController.h; sourceTree = "<group>"; };
-		73C2A1E413BA2A6100CAD359 /* SPBaseModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBaseModelViewController.m; sourceTree = "<group>"; };
-		73C2A1E513BA2A6100CAD359 /* SPGenericViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGenericViewController.h; sourceTree = "<group>"; };
-		73C2A1E613BA2A6100CAD359 /* SPGenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGenericViewController.m; sourceTree = "<group>"; };
-		73C2A1E713BA2A6100CAD359 /* SPQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPQuestionViewController.h; sourceTree = "<group>"; };
-		73C2A1E813BA2A6100CAD359 /* SPQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPQuestionViewController.m; sourceTree = "<group>"; };
-		73C2A1E913BA2A6100CAD359 /* SPUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPUserViewController.h; sourceTree = "<group>"; };
-		73C2A1EA13BA2A6100CAD359 /* SPUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPUserViewController.m; sourceTree = "<group>"; };
+		73C2A1E313BA2A6100CAD359 /* BaseModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModelViewController.h; sourceTree = "<group>"; };
+		73C2A1E413BA2A6100CAD359 /* BaseModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModelViewController.m; sourceTree = "<group>"; };
+		73C2A1E513BA2A6100CAD359 /* ModelTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelTableViewController.h; sourceTree = "<group>"; };
+		73C2A1E613BA2A6100CAD359 /* ModelTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelTableViewController.m; sourceTree = "<group>"; };
+		73C2A1E713BA2A6100CAD359 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		73C2A1E813BA2A6100CAD359 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		73C2A1E913BA2A6100CAD359 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		73C2A1EA13BA2A6100CAD359 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		73C2A1EC13BA2A6100CAD359 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		73C2A1ED13BA2A6100CAD359 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		73C2A1EE13BA2A6100CAD359 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
@@ -96,8 +107,8 @@
 		73C2A20C13BA2A6100CAD359 /* StackExchangeAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackExchangeAPI.m; sourceTree = "<group>"; };
 		73C2A20D13BA2A6100CAD359 /* StackPadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackPadAppDelegate.h; sourceTree = "<group>"; };
 		73C2A20E13BA2A6100CAD359 /* StackPadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackPadAppDelegate.m; sourceTree = "<group>"; };
-		73C2A21013BA2A6100CAD359 /* SPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTableViewCell.h; sourceTree = "<group>"; };
-		73C2A21113BA2A6100CAD359 /* SPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTableViewCell.m; sourceTree = "<group>"; };
+		73C2A21013BA2A6100CAD359 /* BasicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicTableViewCell.h; sourceTree = "<group>"; };
+		73C2A21113BA2A6100CAD359 /* BasicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicTableViewCell.m; sourceTree = "<group>"; };
 		73C2A21413BA2A6100CAD359 /* Categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Categories.plist; sourceTree = "<group>"; };
 		73C2A21513BA2A6100CAD359 /* StackPad-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "StackPad-Info.plist"; sourceTree = "<group>"; };
 		73C2A21713BA2A6100CAD359 /* answers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = answers.png; sourceTree = "<group>"; };
@@ -108,6 +119,8 @@
 		73C2A21C13BA2A6100CAD359 /* tags.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tags.png; sourceTree = "<group>"; };
 		73C2A21D13BA2A6100CAD359 /* users.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = users.png; sourceTree = "<group>"; };
 		73C2A21F13BA2A6100CAD359 /* QuestionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionView.xib; sourceTree = "<group>"; };
+		73C2A24113BA372200CAD359 /* BadgeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeTableViewCell.h; sourceTree = "<group>"; };
+		73C2A24213BA372200CAD359 /* BadgeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,14 +188,14 @@
 			children = (
 				73C2A1E113BA2A6100CAD359 /* RootViewController.h */,
 				73C2A1E213BA2A6100CAD359 /* RootViewController.m */,
-				73C2A1E313BA2A6100CAD359 /* SPBaseModelViewController.h */,
-				73C2A1E413BA2A6100CAD359 /* SPBaseModelViewController.m */,
-				73C2A1E513BA2A6100CAD359 /* SPGenericViewController.h */,
-				73C2A1E613BA2A6100CAD359 /* SPGenericViewController.m */,
-				73C2A1E713BA2A6100CAD359 /* SPQuestionViewController.h */,
-				73C2A1E813BA2A6100CAD359 /* SPQuestionViewController.m */,
-				73C2A1E913BA2A6100CAD359 /* SPUserViewController.h */,
-				73C2A1EA13BA2A6100CAD359 /* SPUserViewController.m */,
+				73C2A1E313BA2A6100CAD359 /* BaseModelViewController.h */,
+				73C2A1E413BA2A6100CAD359 /* BaseModelViewController.m */,
+				73C2A1E513BA2A6100CAD359 /* ModelTableViewController.h */,
+				73C2A1E613BA2A6100CAD359 /* ModelTableViewController.m */,
+				73C2A1E713BA2A6100CAD359 /* QuestionViewController.h */,
+				73C2A1E813BA2A6100CAD359 /* QuestionViewController.m */,
+				73C2A1E913BA2A6100CAD359 /* UserViewController.h */,
+				73C2A1EA13BA2A6100CAD359 /* UserViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -233,8 +246,10 @@
 		73C2A20F13BA2A6100CAD359 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				73C2A21013BA2A6100CAD359 /* SPTableViewCell.h */,
-				73C2A21113BA2A6100CAD359 /* SPTableViewCell.m */,
+				73C2A21013BA2A6100CAD359 /* BasicTableViewCell.h */,
+				73C2A21113BA2A6100CAD359 /* BasicTableViewCell.m */,
+				73C2A24113BA372200CAD359 /* BadgeTableViewCell.h */,
+				73C2A24213BA372200CAD359 /* BadgeTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -261,6 +276,9 @@
 		73C2A21613BA2A6100CAD359 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7382102513BA521300B02CE2 /* bronze.png */,
+				7382102613BA521300B02CE2 /* gold.png */,
+				7382102713BA521300B02CE2 /* silver.png */,
 				73C2A21713BA2A6100CAD359 /* answers.png */,
 				73C2A21813BA2A6100CAD359 /* badge.png */,
 				73C2A21913BA2A6100CAD359 /* badges.png */,
@@ -275,6 +293,8 @@
 		73C2A21E13BA2A6100CAD359 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				730241A613BA4080002A67B3 /* DetailView.xib */,
+				730241A713BA4080002A67B3 /* MainWindow.xib */,
 				73C2A21F13BA2A6100CAD359 /* QuestionView.xib */,
 			);
 			path = Layouts;
@@ -340,6 +360,11 @@
 				73C2A23E13BA2A6100CAD359 /* tags.png in Resources */,
 				73C2A23F13BA2A6100CAD359 /* users.png in Resources */,
 				73C2A24013BA2A6100CAD359 /* QuestionView.xib in Resources */,
+				730241A813BA4080002A67B3 /* DetailView.xib in Resources */,
+				730241A913BA4080002A67B3 /* MainWindow.xib in Resources */,
+				7382102813BA521300B02CE2 /* bronze.png in Resources */,
+				7382102913BA521300B02CE2 /* gold.png in Resources */,
+				7382102A13BA521300B02CE2 /* silver.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,10 +376,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				73C2A22013BA2A6100CAD359 /* RootViewController.m in Sources */,
-				73C2A22113BA2A6100CAD359 /* SPBaseModelViewController.m in Sources */,
-				73C2A22213BA2A6100CAD359 /* SPGenericViewController.m in Sources */,
-				73C2A22313BA2A6100CAD359 /* SPQuestionViewController.m in Sources */,
-				73C2A22413BA2A6100CAD359 /* SPUserViewController.m in Sources */,
+				73C2A22113BA2A6100CAD359 /* BaseModelViewController.m in Sources */,
+				73C2A22213BA2A6100CAD359 /* ModelTableViewController.m in Sources */,
+				73C2A22313BA2A6100CAD359 /* QuestionViewController.m in Sources */,
+				73C2A22413BA2A6100CAD359 /* UserViewController.m in Sources */,
 				73C2A22513BA2A6100CAD359 /* NSObject+SBJSON.m in Sources */,
 				73C2A22613BA2A6100CAD359 /* NSString+SBJSON.m in Sources */,
 				73C2A22713BA2A6100CAD359 /* SBJsonBase.m in Sources */,
@@ -372,7 +397,8 @@
 				73C2A23313BA2A6100CAD359 /* SPUser.m in Sources */,
 				73C2A23413BA2A6100CAD359 /* StackExchangeAPI.m in Sources */,
 				73C2A23513BA2A6100CAD359 /* StackPadAppDelegate.m in Sources */,
-				73C2A23613BA2A6100CAD359 /* SPTableViewCell.m in Sources */,
+				73C2A23613BA2A6100CAD359 /* BasicTableViewCell.m in Sources */,
+				73C2A24313BA372200CAD359 /* BadgeTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

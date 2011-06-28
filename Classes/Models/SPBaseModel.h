@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "SPTableViewCell.h"
+#import "BasicTableViewCell.h"
 
 @interface SPBaseModel : NSObject {
     
@@ -18,15 +18,21 @@
 +(id)initWithDictionary:(NSDictionary *)dictionary;
 
 // Get a UITableViewCell for a table 
--(SPTableViewCell*) getUITableCellInTable:(UITableView*)table;
+-(BasicTableViewCell*) getUITableCellInTable:(UITableView*)table;
 
 // Get a UITableViewCell for a table with a particular title
--(SPTableViewCell*) getUITableCellInTable:(UITableView*)table 
+-(BasicTableViewCell*) getUITableCellInTable:(UITableView*)table 
                                 withTitle:(NSString*)title;
 
 // Get a UITableViewCell for a table with a particular title and subtitle
--(SPTableViewCell*) getUITableCellInTable:(UITableView*)table 
+-(BasicTableViewCell*) getUITableCellInTable:(UITableView*)table 
                                 withTitle:(NSString*)title 
                               andSubTitle:(NSString*)subtitle;
+
+// Get a UITableViewCell for a table with a title, subtitle and image
+-(BasicTableViewCell*) getUITableCellInTable:(UITableView*)table 
+                                   withTitle:(NSString*)title 
+                                 andSubTitle:(NSString*)subtitle
+                                    andImage:(UIImage*)image;
 
 @end

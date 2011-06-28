@@ -15,31 +15,46 @@
     return nil;
 }
 
--(SPTableViewCell*) getUITableCellInTable:(UITableView*)table {
+-(BasicTableViewCell*) getUITableCellInTable:(UITableView*)table {
     // Do not implement, should be implemented by subclasses
     return nil;
 }
 
--(SPTableViewCell*) getUITableCellInTable:(UITableView *)table withTitle:(NSString *)title {
+-(BasicTableViewCell*) getUITableCellInTable:(UITableView *)table withTitle:(NSString *)title {
     return [self getUITableCellInTable:table withTitle:title andSubTitle:nil];
 }
 
--(SPTableViewCell*) getUITableCellInTable:(UITableView *)table 
+-(BasicTableViewCell*) getUITableCellInTable:(UITableView *)table 
                                 withTitle:(NSString *)title          
                               andSubTitle:(NSString *)subtitle {
+    return [self getUITableCellInTable:table withTitle:title andSubTitle:subtitle andImage:nil];
+}
+
+-(BasicTableViewCell*) getUITableCellInTable:(UITableView*)table 
+                                   withTitle:(NSString*)title 
+                                 andSubTitle:(NSString*)subtitle
+                                    andImage:(UIImage*)image {
     // Create a new cell for displaying simple data
     static NSString *CellIdentifier = @"CellIdentifier";
-    SPTableViewCell *cell = [[[SPTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle            
-                                                    reuseIdentifier:CellIdentifier] autorelease];
+    BasicTableViewCell *cell = [[[BasicTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle            
+                                                          reuseIdentifier:CellIdentifier] autorelease];
     cell.accessoryType = UITableViewCellAccessoryNone;
     
     // Assign a custom font and text for the label
     cell.textLabel.font = [UIFont systemFontOfSize:16.0];
     cell.textLabel.text = title;
     
-    // Assign a custom font and text for the detailed label
-    cell.detailTextLabel.font = [UIFont systemFontOfSize:14.0];
-    cell.detailTextLabel.text = subtitle;
+    if (image != nil) {        
+        // Configure the cell and return it
+        [cell.imageView setImage:image];
+        [cell.imageView setAlpha:0.7];
+    }
+    
+    if (subtitle != nil) {
+        // Assign a custom font and text for the detailed label
+        cell.detailTextLabel.font = [UIFont systemFontOfSize:14.0];
+        cell.detailTextLabel.text = subtitle;
+    }
     
     return cell;
 }

@@ -121,6 +121,9 @@
     else if (row == 6) {
         [contentViewController setDetailItem:[StackExchangeAPI getComments:nil] fromRow:row withType:SPTypeComment];
     }
+    else if (row == 7) {
+        [contentViewController setDetailItem:[StackExchangeAPI getBadges:nil] fromRow:row withType:SPTypeBadge];
+    }
 }
 
 - (void)didReceiveMemoryWarning

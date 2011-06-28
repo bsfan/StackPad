@@ -41,7 +41,7 @@ NSString* const SPUserAnswerCount = @"answer_count";
     return user;
 }
 
--(SPTableViewCell*) getUITableCellInTable:(UITableView*)table {
+-(BasicTableViewCell*) getUITableCellInTable:(UITableView*)table {
     return [self getUITableCellInTable:table 
                              withTitle:[self displayName] 
                            andSubTitle:[self location]];

@@ -41,7 +41,7 @@ NSString* const SPCommentBody = @"body";
     return comment;
 }
 
--(SPTableViewCell*) getUITableCellInTable:(UITableView*)table {
+-(BasicTableViewCell*) getUITableCellInTable:(UITableView*)table {
     NSString* subtitle = [NSString stringWithFormat:@"%d points", [self score]];
     return [self getUITableCellInTable:table withTitle:[self body] andSubTitle:subtitle];
 }

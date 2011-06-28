@@ -74,4 +74,7 @@ extern NSString* const StackExchangeApiSortByVotes;
 // Get the top comments
 +(NSMutableArray*) getTopComments:(NSString*)options;
 
+// Get the entire list of badges on Stack Exchange
++(NSMutableArray*) getBadges:(NSString*)options;
+
 @end

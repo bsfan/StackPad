@@ -217,4 +217,24 @@ NSString* const StackExchangeApiSortByVotes = @"sort=votes";
     return objects;
 }
 
++(NSMutableArray*) getBadges:(NSString *)options {
+    NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiBadges 
+                                                               withOptions:options];
+    
+    // Get an array of users
+    NSArray *objectArray = (NSArray*)[objectDictionary valueForKey:StackExchangeApiBadges];
+    
+    // Loop over these objects and assign them to the mutable array as users
+    int index;
+    NSDictionary *singleObjectDict;
+    NSMutableArray* objects = [[NSMutableArray alloc] initWithCapacity:objectArray.count];
+    
+    for (index = 0; index < objectArray.count; index++) {
+        singleObjectDict = (NSDictionary*) [objectArray objectAtIndex:index];
+        [objects insertObject:[SPBadge initWithDictionary:singleObjectDict] atIndex:index];
+    }
+    
+    return objects;
+}
+
 @end

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "StackExchangeAPI.h"
-#import "SPGenericViewController.h"
+#import "ModelTableViewController.h"
 
 @class UserViewController;
 
@@ -18,7 +18,7 @@
 
 -(void) openDetailView:(NSInteger*)view;
 
-@property (nonatomic, retain) IBOutlet SPGenericViewController *contentViewController;
+@property (nonatomic, retain) IBOutlet ModelTableViewController *contentViewController;
 @property (nonatomic, retain) NSMutableArray *categories;
 
 @end
