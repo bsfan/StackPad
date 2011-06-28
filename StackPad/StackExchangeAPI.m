@@ -20,6 +20,8 @@ NSString* const StackExchangeApiBadges = @"badges";
 NSString* const StackExchangeApiErrors = @"errors";
 NSString* const StackExchangeApiTags = @"tags";
 
+NSString* const StackExchangeApiSortByVotes = @"sort=votes";
+
 +(NSString*) stringFromUrl:(NSURL *)url {
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:30];
     
@@ -48,7 +50,7 @@ NSString* const StackExchangeApiTags = @"tags";
 + (NSDictionary*) getJsonFromEndpoint:(NSString*)endpoint withOptions:(NSString*)options {
     NSString* urlString;
     
-    if (options)
+    if (options != nil)
         urlString = [NSString stringWithFormat:@"%@%@?key=%@&body=true&%@",StackExchangeApiUrl,endpoint,StackExchangeApiKey,options];
     else
         urlString = [NSString stringWithFormat:@"%@%@?key=%@&body=true",StackExchangeApiUrl,endpoint,StackExchangeApiKey];
@@ -98,7 +100,8 @@ NSString* const StackExchangeApiTags = @"tags";
 }
 
 +(NSMutableArray*) getTopQuestions:(NSString*)options {
-    NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiQuestions withOptions:[NSString stringWithFormat:@"sort=votes&%@",options]];
+    NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiQuestions 
+                                                               withOptions:[NSString stringWithFormat:@"%@&%@",StackExchangeApiSortByVotes, options]];
     
     // Get an array of users
     NSArray *objectArray = (NSArray*)[objectDictionary valueForKey:StackExchangeApiQuestions];
@@ -135,6 +138,26 @@ NSString* const StackExchangeApiTags = @"tags";
     return objects;
 }
 
++(NSMutableArray*) getTopAnswers:(NSString*)options {
+    NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiAnswers 
+                                                               withOptions:[NSString stringWithFormat:@"%@&%@", StackExchangeApiSortByVotes, options]];
+    
+    // Get an array of users
+    NSArray *objectArray = (NSArray*)[objectDictionary valueForKey:StackExchangeApiAnswers];
+    
+    // Loop over these objects and assign them to the mutable array as users
+    int index;
+    NSDictionary *singleObjectDict;
+    NSMutableArray* objects = [[NSMutableArray alloc] initWithCapacity:objectArray.count];
+    
+    for (index = 0; index < objectArray.count; index++) {
+        singleObjectDict = (NSDictionary*) [objectArray objectAtIndex:index];
+        [objects insertObject:[SPAnswer  initWithDictionary:singleObjectDict] atIndex:index];
+    }
+    
+    return objects;
+}
+
 +(NSMutableArray*) getAnswersForQuestion:(NSInteger*)id withOptions:(NSString*)options {
     NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:[NSString stringWithFormat:@"%@/%d/%@",StackExchangeApiQuestions,id,StackExchangeApiAnswers] 
                                                                withOptions:options];
@@ -157,6 +180,26 @@ NSString* const StackExchangeApiTags = @"tags";
 
 +(NSMutableArray*) getComments:(NSString*)options {
     NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiComments withOptions:options];
+    
+    // Get an array of users
+    NSArray *objectArray = (NSArray*)[objectDictionary valueForKey:StackExchangeApiComments];
+    
+    // Loop over these objects and assign them to the mutable array as users
+    int index;
+    NSDictionary *singleObjectDict;
+    NSMutableArray* objects = [[NSMutableArray alloc] initWithCapacity:objectArray.count];
+    
+    for (index = 0; index < objectArray.count; index++) {
+        singleObjectDict = (NSDictionary*) [objectArray objectAtIndex:index];
+        [objects insertObject:[SPComment initWithDictionary:singleObjectDict] atIndex:index];
+    }
+    
+    return objects;
+}
+
++(NSMutableArray*) getTopComments:(NSString*)options {
+    NSDictionary* objectDictionary = [StackExchangeAPI getJsonFromEndpoint:StackExchangeApiComments 
+                                                               withOptions:[NSString stringWithFormat:@"%@&%@", StackExchangeApiSortByVotes, options]];
     
     // Get an array of users
     NSArray *objectArray = (NSArray*)[objectDictionary valueForKey:StackExchangeApiComments];

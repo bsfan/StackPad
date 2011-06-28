@@ -31,6 +31,9 @@ extern NSString* const StackExchangeApiBadges;
 extern NSString* const StackExchangeApiErrors;
 extern NSString* const StackExchangeApiTags;
 
+// Common query options
+extern NSString* const StackExchangeApiSortByVotes;
+
 @interface StackExchangeAPI : NSObject {
     
 }
@@ -59,10 +62,16 @@ extern NSString* const StackExchangeApiTags;
 // Query for answers
 +(NSMutableArray*) getAnswers:(NSString*)options;
 
+// Get the top answers
++(NSMutableArray*) getTopAnswers:(NSString*)options;
+
 // Get the answers for a particular question
 +(NSMutableArray*) getAnswersForQuestion:(NSInteger*)id withOptions:(NSString*)options;
 
 // Query for comments
 +(NSMutableArray*) getComments:(NSString*)options;
+
+// Get the top comments
++(NSMutableArray*) getTopComments:(NSString*)options;
 
 @end

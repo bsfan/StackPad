@@ -62,11 +62,28 @@ NSString* const SPAnswerBody = @"body";
     return answer;
 }
 
--(SPTableViewCell*) getUITableCellInTable:(UITableView*)table {
+/*-(SPTableViewCell*) getUITableCellInTable:(UITableView*)table {
     NSString* subtitle = [NSString stringWithFormat:@"%d points", [self score]];
     return [self getUITableCellInTable:table 
                              withTitle:[self body] 
                            andSubTitle:subtitle];
+}*/
+
+-(SPTableViewCell*) getUITableCellInTable:(UITableView *)table {
+    // Create a new cell for displaying simple data
+    static NSString *CellIdentifier = @"CellIdentifier";
+    SPTableViewCell *cell = [[[SPTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle            
+                                                    reuseIdentifier:CellIdentifier] autorelease];
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    
+    // Assign a custom font and text for the label
+    cell.textLabel.font = [UIFont systemFontOfSize:16.0];
+    cell.textLabel.text = title;
+    
+    // Assign a custom font and text for the detailed label
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:14.0];
+    
+    return cell;
 }
 
 @end

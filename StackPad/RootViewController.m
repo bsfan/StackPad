@@ -107,10 +107,10 @@
         [contentViewController setDetailItem:[StackExchangeAPI getTopQuestions:nil] fromRow:row withType:SPTypeQuestion];
     }
     else if (row == 2) {
-        [contentViewController setDetailItem:[StackExchangeAPI getAnswers:nil] fromRow:row withType:SPTypeAnswer];
+        [contentViewController setDetailItem:[StackExchangeAPI getTopAnswers:nil] fromRow:row withType:SPTypeAnswer];
     }
     else if (row == 3) {
-        [contentViewController setDetailItem:[StackExchangeAPI getComments:nil] fromRow:row withType:SPTypeComment];
+        [contentViewController setDetailItem:[StackExchangeAPI getTopComments:nil] fromRow:row withType:SPTypeComment];
     }
     else if (row == 4) {
         [contentViewController setDetailItem:[StackExchangeAPI getQuestions:nil] fromRow:row withType:SPTypeQuestion];
@@ -119,7 +119,7 @@
         [contentViewController setDetailItem:[StackExchangeAPI getAnswers:nil] fromRow:row withType:SPTypeAnswer];
     }
     else if (row == 6) {
-        [contentViewController setDetailItem:[StackExchangeAPI getComments] fromRow:row withType:SPTypeComment];
+        [contentViewController setDetailItem:[StackExchangeAPI getComments:nil] fromRow:row withType:SPTypeComment];
     }
 }
 
